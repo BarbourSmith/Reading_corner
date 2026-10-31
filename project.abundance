@@ -183,11 +183,11 @@
             },
             {
               "name": "leftWinL",
-              "ioValue": -1810
+              "ioValue": -2080
             },
             {
               "name": "leftWinR",
-              "ioValue": -1230
+              "ioValue": -1290
             },
             {
               "name": "leftSill",
@@ -199,11 +199,11 @@
             },
             {
               "name": "rightWinL",
-              "ioValue": 1265
+              "ioValue": 1300
             },
             {
               "name": "rightWinR",
-              "ioValue": 2141
+              "ioValue": 2090
             },
             {
               "name": "rightSill",
@@ -815,11 +815,11 @@
           "ioValues": [
             {
               "name": "winL",
-              "ioValue": -1810
+              "ioValue": -2080
             },
             {
               "name": "winR",
-              "ioValue": -1230
+              "ioValue": -1290
             },
             {
               "name": "winSill",
@@ -854,11 +854,11 @@
           "ioValues": [
             {
               "name": "winL",
-              "ioValue": -1810
+              "ioValue": -2080
             },
             {
               "name": "winR",
-              "ioValue": -1230
+              "ioValue": -1290
             },
             {
               "name": "winSill",
@@ -897,11 +897,11 @@
           "ioValues": [
             {
               "name": "winL",
-              "ioValue": -1810
+              "ioValue": -2080
             },
             {
               "name": "winR",
-              "ioValue": -1230
+              "ioValue": -1290
             },
             {
               "name": "winSill",
@@ -1025,11 +1025,11 @@
           "ioValues": [
             {
               "name": "winL",
-              "ioValue": 1265
+              "ioValue": 1300
             },
             {
               "name": "winR",
-              "ioValue": 2141
+              "ioValue": 2090
             },
             {
               "name": "winSill",
@@ -1064,11 +1064,11 @@
           "ioValues": [
             {
               "name": "winL",
-              "ioValue": 1265
+              "ioValue": 1300
             },
             {
               "name": "winR",
-              "ioValue": 2141
+              "ioValue": 2090
             },
             {
               "name": "winSill",
@@ -1107,11 +1107,11 @@
           "ioValues": [
             {
               "name": "winL",
-              "ioValue": 1265
+              "ioValue": 1300
             },
             {
               "name": "winR",
-              "ioValue": 2141
+              "ioValue": 2090
             },
             {
               "name": "winSill",
@@ -1308,11 +1308,11 @@
           "ioValues": [
             {
               "name": "openL",
-              "ioValue": -1810
+              "ioValue": -2080
             },
             {
               "name": "openR",
-              "ioValue": -1230
+              "ioValue": -1290
             },
             {
               "name": "openBottom",
@@ -1381,11 +1381,11 @@
           "ioValues": [
             {
               "name": "openL",
-              "ioValue": 1265
+              "ioValue": 1300
             },
             {
               "name": "openR",
-              "ioValue": 2141
+              "ioValue": 2090
             },
             {
               "name": "openBottom",
@@ -1523,7 +1523,7 @@
       "x": 0.8,
       "y": 0.6,
       "uniqueID": "id-1630",
-      "name": "Extract trim, glass, window, seat, wall, floor, scan",
+      "name": "Extract trim, glass, window, seat, wall, floor",
       "ioValues": [
         {
           "name": "geometry",
@@ -1537,8 +1537,7 @@
         "window",
         "seat",
         "wall",
-        "floor",
-        "scan"
+        "floor"
       ],
       "includeUntagged": false,
       "notKeepOut": false
