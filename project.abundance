@@ -56,7 +56,7 @@
     },
     {
       "atomType": "Import",
-      "x": 0.7,
+      "x": 0.6,
       "y": 0.9,
       "uniqueID": "id-1102",
       "fileName": "AbundanceScan-2026-10-31_095710.glb",
@@ -1428,8 +1428,8 @@
     },
     {
       "atomType": "Assembly",
-      "x": 0.8,
-      "y": 0.5,
+      "x": 0.7,
+      "y": 0.4,
       "uniqueID": "id-1608",
       "ioValues": [
         {
@@ -1501,13 +1501,54 @@
           "ioValue": "__GEOMETRY_INPUT__"
         }
       ]
+    },
+    {
+      "atomType": "Tag",
+      "x": 0.7,
+      "y": 0.8,
+      "uniqueID": "id-1627",
+      "name": "scan",
+      "ioValues": [
+        {
+          "name": "geometry",
+          "ioValue": "__GEOMETRY_INPUT__"
+        }
+      ],
+      "tags": [
+        "scan"
+      ]
+    },
+    {
+      "atomType": "ExtractTag",
+      "x": 0.8,
+      "y": 0.6,
+      "uniqueID": "id-1630",
+      "name": "Extract trim, glass, window, seat, wall, floor, scan",
+      "ioValues": [
+        {
+          "name": "geometry",
+          "ioValue": "__GEOMETRY_INPUT__"
+        }
+      ],
+      "tagIndex": 0,
+      "selectedTags": [
+        "trim",
+        "glass",
+        "window",
+        "seat",
+        "wall",
+        "floor",
+        "scan"
+      ],
+      "includeUntagged": false,
+      "notKeepOut": false
     }
   ],
   "allConnectors": [
     {
-      "ap2Name": "Shape15",
+      "ap2Name": "geometry",
       "ap1ID": "id-1102",
-      "ap2ID": "id-1608"
+      "ap2ID": "id-1627"
     },
     {
       "ap2Name": "Shape 1",
@@ -1585,8 +1626,18 @@
       "ap2ID": "id-1608"
     },
     {
-      "ap2Name": "number or geometry",
+      "ap2Name": "geometry",
       "ap1ID": "id-1608",
+      "ap2ID": "id-1630"
+    },
+    {
+      "ap2Name": "Shape15",
+      "ap1ID": "id-1627",
+      "ap2ID": "id-1608"
+    },
+    {
+      "ap2Name": "number or geometry",
+      "ap1ID": "id-1630",
       "ap2ID": "id-1094"
     }
   ],
