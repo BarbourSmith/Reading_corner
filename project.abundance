@@ -1,13 +1,74 @@
 {
-    "atomType": "Molecule",
-    "x": 0,
-    "y": 0,
-    "uniqueID": "id-1093",
-    "name": "Reading_corner",
-    "topLevel": true,
-    "allAtoms": [],
-    "allConnectors": [],
-    "unitsKey": "MM",
-    "fileTypeVersion": 1,
-    "filetypeVersion": 1
+  "atomType": "Molecule",
+  "x": 0,
+  "y": 0,
+  "uniqueID": "id-1093",
+  "name": "Reading_corner",
+  "topLevel": true,
+  "allAtoms": [
+    {
+      "atomType": "Output",
+      "x": 1,
+      "y": 0.5,
+      "uniqueID": "id-1094",
+      "ioValues": [
+        {
+          "name": "number or geometry",
+          "ioValue": "__GEOMETRY_INPUT__"
+        }
+      ]
+    },
+    {
+      "atomType": "Import",
+      "x": 0.1,
+      "y": 0.2,
+      "uniqueID": "id-1096",
+      "fileName": "36136520-6CC5-459C-A21E-0A34EA9CDF2F.JPG",
+      "name": "Import",
+      "type": "JPG",
+      "repoOwner": "BarbourSmith",
+      "repoName": "Reading_corner",
+      "SVGwidth": 10
+    },
+    {
+      "atomType": "Import",
+      "x": 0.1,
+      "y": 0.5,
+      "uniqueID": "id-1098",
+      "fileName": "A0832E9D-54E2-4824-8134-155E1D074B8E.JPG",
+      "name": "Import",
+      "type": "JPG",
+      "repoOwner": "BarbourSmith",
+      "repoName": "Reading_corner",
+      "SVGwidth": 10
+    },
+    {
+      "atomType": "Import",
+      "x": 0.1,
+      "y": 0.7,
+      "uniqueID": "id-1100",
+      "fileName": "D038BF67-7F67-4D53-B8DB-31D83CB07D79.JPG",
+      "name": "Import",
+      "type": "JPG",
+      "repoOwner": "BarbourSmith",
+      "repoName": "Reading_corner",
+      "SVGwidth": 10
+    },
+    {
+      "atomType": "Import",
+      "x": 0.3,
+      "y": 0.6,
+      "uniqueID": "id-1102",
+      "fileName": "AbundanceScan-2026-10-31_095710.glb",
+      "name": "Import",
+      "type": "GLB",
+      "repoOwner": "BarbourSmith",
+      "repoName": "Reading_corner",
+      "SVGwidth": 10
+    }
+  ],
+  "allConnectors": [],
+  "unitsKey": "MM",
+  "fileTypeVersion": 1,
+  "filetypeVersion": 1
 }
