@@ -195,7 +195,7 @@
             },
             {
               "name": "leftHead",
-              "ioValue": 2165
+              "ioValue": 2160
             },
             {
               "name": "rightWinL",
@@ -211,7 +211,7 @@
             },
             {
               "name": "rightHead",
-              "ioValue": 2150
+              "ioValue": 2160
             }
           ],
           "interpreterVersion": 1,
@@ -827,7 +827,7 @@
             },
             {
               "name": "winHead",
-              "ioValue": 2165
+              "ioValue": 2160
             },
             {
               "name": "outerY",
@@ -866,7 +866,7 @@
             },
             {
               "name": "winHead",
-              "ioValue": 2165
+              "ioValue": 2160
             },
             {
               "name": "outerY",
@@ -909,7 +909,7 @@
             },
             {
               "name": "winHead",
-              "ioValue": 2165
+              "ioValue": 2160
             },
             {
               "name": "outerY",
@@ -1037,7 +1037,7 @@
             },
             {
               "name": "winHead",
-              "ioValue": 2150
+              "ioValue": 2160
             },
             {
               "name": "outerY",
@@ -1076,7 +1076,7 @@
             },
             {
               "name": "winHead",
-              "ioValue": 2150
+              "ioValue": 2160
             },
             {
               "name": "outerY",
@@ -1119,7 +1119,7 @@
             },
             {
               "name": "winHead",
-              "ioValue": 2150
+              "ioValue": 2160
             },
             {
               "name": "outerY",
@@ -1320,7 +1320,7 @@
             },
             {
               "name": "openTop",
-              "ioValue": 2165
+              "ioValue": 2160
             },
             {
               "name": "faceY",
@@ -1393,7 +1393,7 @@
             },
             {
               "name": "openTop",
-              "ioValue": 2150
+              "ioValue": 2160
             },
             {
               "name": "faceY",
@@ -1523,7 +1523,7 @@
       "x": 0.8,
       "y": 0.6,
       "uniqueID": "id-1630",
-      "name": "Extract trim, glass, window, seat, wall, floor",
+      "name": "Extract trim, glass, window, seat, wall, floor, scan",
       "ioValues": [
         {
           "name": "geometry",
@@ -1537,7 +1537,8 @@
         "window",
         "seat",
         "wall",
-        "floor"
+        "floor",
+        "scan"
       ],
       "includeUntagged": false,
       "notKeepOut": false
