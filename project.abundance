@@ -1934,7 +1934,7 @@
       "x": 0.7,
       "y": 0.3,
       "uniqueID": "id-2658",
-      "name": "Extract room, scan, photo",
+      "name": "Extract room",
       "ioValues": [
         {
           "name": "geometry",
@@ -1943,9 +1943,7 @@
       ],
       "tagIndex": 0,
       "selectedTags": [
-        "room",
-        "scan",
-        "photo"
+        "room"
       ],
       "includeUntagged": false,
       "notKeepOut": false
