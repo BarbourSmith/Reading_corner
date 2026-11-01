@@ -186,11 +186,11 @@
             },
             {
               "name": "leftWinL",
-              "ioValue": -2080
+              "ioValue": -2161
             },
             {
               "name": "leftWinR",
-              "ioValue": -1290
+              "ioValue": -1281
             },
             {
               "name": "leftSill",
@@ -202,7 +202,7 @@
             },
             {
               "name": "rightWinL",
-              "ioValue": 1300
+              "ioValue": 1210
             },
             {
               "name": "rightWinR",
@@ -364,11 +364,11 @@
             },
             {
               "name": "winL",
-              "ioValue": -980
+              "ioValue": -948
             },
             {
               "name": "winR",
-              "ioValue": 880
+              "ioValue": 843
             },
             {
               "name": "winSill",
@@ -376,7 +376,7 @@
             },
             {
               "name": "winHead",
-              "ioValue": 1990
+              "ioValue": 2180
             }
           ],
           "interpreterVersion": 1,
@@ -608,11 +608,11 @@
           "ioValues": [
             {
               "name": "winL",
-              "ioValue": -980
+              "ioValue": -948
             },
             {
               "name": "winR",
-              "ioValue": 880
+              "ioValue": 843
             },
             {
               "name": "winSill",
@@ -620,7 +620,7 @@
             },
             {
               "name": "winHead",
-              "ioValue": 1990
+              "ioValue": 2180
             },
             {
               "name": "outerY",
@@ -647,11 +647,11 @@
           "ioValues": [
             {
               "name": "winL",
-              "ioValue": -980
+              "ioValue": -948
             },
             {
               "name": "winR",
-              "ioValue": 880
+              "ioValue": 843
             },
             {
               "name": "winSill",
@@ -659,7 +659,7 @@
             },
             {
               "name": "winHead",
-              "ioValue": 1990
+              "ioValue": 2180
             },
             {
               "name": "outerY",
@@ -690,11 +690,11 @@
           "ioValues": [
             {
               "name": "winL",
-              "ioValue": -980
+              "ioValue": -948
             },
             {
               "name": "winR",
-              "ioValue": 880
+              "ioValue": 843
             },
             {
               "name": "winSill",
@@ -702,7 +702,7 @@
             },
             {
               "name": "winHead",
-              "ioValue": 1990
+              "ioValue": 2180
             },
             {
               "name": "outerY",
@@ -818,11 +818,11 @@
           "ioValues": [
             {
               "name": "winL",
-              "ioValue": -2080
+              "ioValue": -2161
             },
             {
               "name": "winR",
-              "ioValue": -1290
+              "ioValue": -1281
             },
             {
               "name": "winSill",
@@ -857,11 +857,11 @@
           "ioValues": [
             {
               "name": "winL",
-              "ioValue": -2080
+              "ioValue": -2161
             },
             {
               "name": "winR",
-              "ioValue": -1290
+              "ioValue": -1281
             },
             {
               "name": "winSill",
@@ -900,11 +900,11 @@
           "ioValues": [
             {
               "name": "winL",
-              "ioValue": -2080
+              "ioValue": -2161
             },
             {
               "name": "winR",
-              "ioValue": -1290
+              "ioValue": -1281
             },
             {
               "name": "winSill",
@@ -1028,7 +1028,7 @@
           "ioValues": [
             {
               "name": "winL",
-              "ioValue": 1300
+              "ioValue": 1210
             },
             {
               "name": "winR",
@@ -1067,7 +1067,7 @@
           "ioValues": [
             {
               "name": "winL",
-              "ioValue": 1300
+              "ioValue": 1210
             },
             {
               "name": "winR",
@@ -1110,7 +1110,7 @@
           "ioValues": [
             {
               "name": "winL",
-              "ioValue": 1300
+              "ioValue": 1210
             },
             {
               "name": "winR",
@@ -1238,11 +1238,11 @@
           "ioValues": [
             {
               "name": "openL",
-              "ioValue": -980
+              "ioValue": -948
             },
             {
               "name": "openR",
-              "ioValue": 880
+              "ioValue": 843
             },
             {
               "name": "openBottom",
@@ -1250,7 +1250,7 @@
             },
             {
               "name": "openTop",
-              "ioValue": 1990
+              "ioValue": 2180
             },
             {
               "name": "faceY",
@@ -1311,11 +1311,11 @@
           "ioValues": [
             {
               "name": "openL",
-              "ioValue": -2080
+              "ioValue": -2161
             },
             {
               "name": "openR",
-              "ioValue": -1290
+              "ioValue": -1281
             },
             {
               "name": "openBottom",
@@ -1384,7 +1384,7 @@
           "ioValues": [
             {
               "name": "openL",
-              "ioValue": 1300
+              "ioValue": 1210
             },
             {
               "name": "openR",
