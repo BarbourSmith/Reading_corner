@@ -28,7 +28,8 @@
       "type": "JPG",
       "repoOwner": "BarbourSmith",
       "repoName": "Reading_corner",
-      "SVGwidth": 10
+      "SVGwidth": 10,
+      "referenceWidth": 1029.8
     },
     {
       "atomType": "Import",
@@ -40,7 +41,8 @@
       "type": "JPG",
       "repoOwner": "BarbourSmith",
       "repoName": "Reading_corner",
-      "SVGwidth": 10
+      "SVGwidth": 10,
+      "referenceWidth": 1373.1
     },
     {
       "atomType": "Import",
@@ -52,7 +54,8 @@
       "type": "JPG",
       "repoOwner": "BarbourSmith",
       "repoName": "Reading_corner",
-      "SVGwidth": 10
+      "SVGwidth": 10,
+      "referenceWidth": 1029.8
     },
     {
       "atomType": "Import",
@@ -93,10 +96,6 @@
           "uniqueID": "id-1211",
           "ioValues": [
             {
-              "name": "thickness",
-              "ioValue": 20
-            },
-            {
               "name": "xMin",
               "ioValue": -2850
             },
@@ -111,6 +110,10 @@
             {
               "name": "yMax",
               "ioValue": 320
+            },
+            {
+              "name": "thickness",
+              "ioValue": 20
             }
           ],
           "interpreterVersion": 1,
@@ -1499,6 +1502,10 @@
         {
           "name": "Shape16",
           "ioValue": "__GEOMETRY_INPUT__"
+        },
+        {
+          "name": "Shape17",
+          "ioValue": "__GEOMETRY_INPUT__"
         }
       ]
     },
@@ -1523,7 +1530,7 @@
       "x": 0.8,
       "y": 0.6,
       "uniqueID": "id-1630",
-      "name": "Extract trim, glass, window, seat, wall, floor, scan",
+      "name": "Extract trim, glass, window, seat, wall, floor, scan, photo",
       "ioValues": [
         {
           "name": "geometry",
@@ -1538,13 +1545,217 @@
         "seat",
         "wall",
         "floor",
-        "scan"
+        "scan",
+        "photo"
       ],
       "includeUntagged": false,
       "notKeepOut": false
+    },
+    {
+      "atomType": "Rotate",
+      "x": 0.1,
+      "y": 0.2,
+      "uniqueID": "id-1906",
+      "ioValues": [
+        {
+          "name": "geometry",
+          "ioValue": "__GEOMETRY_INPUT__"
+        },
+        {
+          "name": "x-axis degrees",
+          "ioValue": 89.14
+        },
+        {
+          "name": "y-axis degrees",
+          "ioValue": -1.21
+        },
+        {
+          "name": "z-axis degrees",
+          "ioValue": -18.05
+        }
+      ]
+    },
+    {
+      "atomType": "Move",
+      "x": 0.2,
+      "y": 0.2,
+      "uniqueID": "id-1912",
+      "ioValues": [
+        {
+          "name": "geometry",
+          "ioValue": "__GEOMETRY_INPUT__"
+        },
+        {
+          "name": "xDist",
+          "ioValue": 621.9
+        },
+        {
+          "name": "yDist",
+          "ioValue": -2162.4
+        },
+        {
+          "name": "zDist",
+          "ioValue": 1460.7
+        }
+      ]
+    },
+    {
+      "atomType": "Rotate",
+      "x": 0.1,
+      "y": 0.3,
+      "uniqueID": "id-1918",
+      "ioValues": [
+        {
+          "name": "geometry",
+          "ioValue": "__GEOMETRY_INPUT__"
+        },
+        {
+          "name": "x-axis degrees",
+          "ioValue": 86.41
+        },
+        {
+          "name": "y-axis degrees",
+          "ioValue": 1.43
+        },
+        {
+          "name": "z-axis degrees",
+          "ioValue": 20.56
+        }
+      ]
+    },
+    {
+      "atomType": "Move",
+      "x": 0.2,
+      "y": 0.3,
+      "uniqueID": "id-1924",
+      "ioValues": [
+        {
+          "name": "geometry",
+          "ioValue": "__GEOMETRY_INPUT__"
+        },
+        {
+          "name": "xDist",
+          "ioValue": 1013.2
+        },
+        {
+          "name": "yDist",
+          "ioValue": -2428.1
+        },
+        {
+          "name": "zDist",
+          "ioValue": 1464
+        }
+      ]
+    },
+    {
+      "atomType": "Rotate",
+      "x": 0.1,
+      "y": 0.4,
+      "uniqueID": "id-1930",
+      "ioValues": [
+        {
+          "name": "geometry",
+          "ioValue": "__GEOMETRY_INPUT__"
+        },
+        {
+          "name": "x-axis degrees",
+          "ioValue": 88.63
+        },
+        {
+          "name": "y-axis degrees",
+          "ioValue": 1.77
+        },
+        {
+          "name": "z-axis degrees",
+          "ioValue": 31.51
+        }
+      ]
+    },
+    {
+      "atomType": "Move",
+      "x": 0.2,
+      "y": 0.4,
+      "uniqueID": "id-1936",
+      "ioValues": [
+        {
+          "name": "geometry",
+          "ioValue": "__GEOMETRY_INPUT__"
+        },
+        {
+          "name": "xDist",
+          "ioValue": -429.2
+        },
+        {
+          "name": "yDist",
+          "ioValue": -1600.4
+        },
+        {
+          "name": "zDist",
+          "ioValue": 1403.6
+        }
+      ]
+    },
+    {
+      "atomType": "Assembly",
+      "x": 0.2,
+      "y": 0.3,
+      "uniqueID": "id-1942",
+      "ioValues": [
+        {
+          "name": "makeDisjoint",
+          "ioValue": false
+        },
+        {
+          "name": "Shape 1",
+          "ioValue": "__GEOMETRY_INPUT__"
+        },
+        {
+          "name": "Shape2",
+          "ioValue": "__GEOMETRY_INPUT__"
+        },
+        {
+          "name": "Shape3",
+          "ioValue": "__GEOMETRY_INPUT__"
+        },
+        {
+          "name": "Shape4",
+          "ioValue": "__GEOMETRY_INPUT__"
+        }
+      ]
+    },
+    {
+      "atomType": "Tag",
+      "x": 0.3,
+      "y": 0.3,
+      "uniqueID": "id-1949",
+      "name": "photo",
+      "ioValues": [
+        {
+          "name": "geometry",
+          "ioValue": "__GEOMETRY_INPUT__"
+        }
+      ],
+      "tags": [
+        "photo"
+      ]
     }
   ],
   "allConnectors": [
+    {
+      "ap2Name": "geometry",
+      "ap1ID": "id-1096",
+      "ap2ID": "id-1906"
+    },
+    {
+      "ap2Name": "geometry",
+      "ap1ID": "id-1098",
+      "ap2ID": "id-1918"
+    },
+    {
+      "ap2Name": "geometry",
+      "ap1ID": "id-1100",
+      "ap2ID": "id-1930"
+    },
     {
       "ap2Name": "geometry",
       "ap1ID": "id-1102",
@@ -1639,6 +1850,46 @@
       "ap2Name": "number or geometry",
       "ap1ID": "id-1630",
       "ap2ID": "id-1094"
+    },
+    {
+      "ap2Name": "geometry",
+      "ap1ID": "id-1906",
+      "ap2ID": "id-1912"
+    },
+    {
+      "ap2Name": "Shape 1",
+      "ap1ID": "id-1912",
+      "ap2ID": "id-1942"
+    },
+    {
+      "ap2Name": "geometry",
+      "ap1ID": "id-1918",
+      "ap2ID": "id-1924"
+    },
+    {
+      "ap2Name": "Shape2",
+      "ap1ID": "id-1924",
+      "ap2ID": "id-1942"
+    },
+    {
+      "ap2Name": "geometry",
+      "ap1ID": "id-1930",
+      "ap2ID": "id-1936"
+    },
+    {
+      "ap2Name": "Shape3",
+      "ap1ID": "id-1936",
+      "ap2ID": "id-1942"
+    },
+    {
+      "ap2Name": "geometry",
+      "ap1ID": "id-1942",
+      "ap2ID": "id-1949"
+    },
+    {
+      "ap2Name": "Shape16",
+      "ap1ID": "id-1949",
+      "ap2ID": "id-1608"
     }
   ],
   "unitsKey": "MM",
