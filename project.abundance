@@ -19,231 +19,18 @@
       ]
     },
     {
-      "atomType": "Import",
-      "x": 0.1,
-      "y": 0.2,
-      "uniqueID": "id-1096",
-      "fileName": "36136520-6CC5-459C-A21E-0A34EA9CDF2F.JPG",
-      "name": "Import",
-      "type": "JPG",
-      "repoOwner": "BarbourSmith",
-      "repoName": "Reading_corner",
-      "SVGwidth": 10,
-      "referenceWidth": 1029.8
-    },
-    {
-      "atomType": "Import",
-      "x": 0.1,
-      "y": 0.5,
-      "uniqueID": "id-1098",
-      "fileName": "A0832E9D-54E2-4824-8134-155E1D074B8E.JPG",
-      "name": "Import",
-      "type": "JPG",
-      "repoOwner": "BarbourSmith",
-      "repoName": "Reading_corner",
-      "SVGwidth": 10,
-      "referenceWidth": 1373.1
-    },
-    {
-      "atomType": "Import",
-      "x": 0.1,
-      "y": 0.7,
-      "uniqueID": "id-1100",
-      "fileName": "D038BF67-7F67-4D53-B8DB-31D83CB07D79.JPG",
-      "name": "Import",
-      "type": "JPG",
-      "repoOwner": "BarbourSmith",
-      "repoName": "Reading_corner",
-      "SVGwidth": 10,
-      "referenceWidth": 1029.8
-    },
-    {
-      "atomType": "Import",
-      "x": 0.6,
-      "y": 0.9,
-      "uniqueID": "id-1102",
-      "fileName": "AbundanceScan-2026-10-31_095710.glb",
-      "name": "Import",
-      "type": "GLB",
-      "repoOwner": "BarbourSmith",
-      "repoName": "Reading_corner",
-      "SVGwidth": 10
-    },
-    {
       "atomType": "Molecule",
-      "x": 0.3,
-      "y": 0.2,
-      "uniqueID": "id-1207",
-      "name": "Floor",
-      "topLevel": false,
-      "allAtoms": [
-        {
-          "atomType": "Output",
-          "x": 1,
-          "y": 0.5,
-          "uniqueID": "id-1209",
-          "ioValues": [
-            {
-              "name": "number or geometry",
-              "ioValue": "__GEOMETRY_INPUT__"
-            }
-          ]
-        },
-        {
-          "atomType": "Code",
-          "x": 0.2,
-          "y": 0.2,
-          "uniqueID": "id-1211",
-          "ioValues": [
-            {
-              "name": "xMin",
-              "ioValue": -2850
-            },
-            {
-              "name": "xMax",
-              "ioValue": 2285
-            },
-            {
-              "name": "yMin",
-              "ioValue": -2400
-            },
-            {
-              "name": "yMax",
-              "ioValue": 320
-            },
-            {
-              "name": "thickness",
-              "ioValue": 20
-            }
-          ],
-          "interpreterVersion": 1,
-          "code": "/** Floor slab; top face at z = 0 (scan floor level). Dimensions in mm, scan coordinates. */\nfunction run(\n  xMin: number = -2850,\n  xMax: number = 2285,\n  yMin: number = -2400,\n  yMax: number = 320,\n  thickness: number = 20,\n): Assembly {\n  const slab = replicad.makeBox([xMin, yMin, -thickness], [xMax, yMax, 0]);\n  return new Assembly({ geometry: slab, color: \"#7a4a2e\", tags: [\"floor\"] });\n}\n",
-          "compiledCode": "\"use strict\";\n/** Floor slab; top face at z = 0 (scan floor level). Dimensions in mm, scan coordinates. */\nfunction run(xMin = -2850, xMax = 2285, yMin = -2400, yMax = 320, thickness = 20) {\n    const slab = replicad.makeBox([xMin, yMin, -thickness], [xMax, yMax, 0]);\n    return new Assembly({ geometry: slab, color: \"#7a4a2e\", tags: [\"floor\"] });\n}\n"
-        }
-      ],
-      "allConnectors": [
-        {
-          "ap2Name": "number or geometry",
-          "ap1ID": "id-1211",
-          "ap2ID": "id-1209"
-        }
-      ],
-      "fileTypeVersion": 1
-    },
-    {
-      "atomType": "Molecule",
-      "x": 0.3,
-      "y": 0.3,
-      "uniqueID": "id-1224",
-      "name": "Room Wall",
-      "topLevel": false,
-      "allAtoms": [
-        {
-          "atomType": "Output",
-          "x": 1,
-          "y": 0.5,
-          "uniqueID": "id-1226",
-          "ioValues": [
-            {
-              "name": "number or geometry",
-              "ioValue": "__GEOMETRY_INPUT__"
-            }
-          ]
-        },
-        {
-          "atomType": "Code",
-          "x": 0.2,
-          "y": 0.2,
-          "uniqueID": "id-1228",
-          "ioValues": [
-            {
-              "name": "xLeft",
-              "ioValue": -2850
-            },
-            {
-              "name": "xRight",
-              "ioValue": 2285
-            },
-            {
-              "name": "faceY",
-              "ioValue": -620
-            },
-            {
-              "name": "wallThick",
-              "ioValue": 165
-            },
-            {
-              "name": "ceilingZ",
-              "ioValue": 2575
-            },
-            {
-              "name": "alcoveLeftX",
-              "ioValue": -1143
-            },
-            {
-              "name": "alcoveRightX",
-              "ioValue": 1042
-            },
-            {
-              "name": "leftWinL",
-              "ioValue": -2161
-            },
-            {
-              "name": "leftWinR",
-              "ioValue": -1281
-            },
-            {
-              "name": "leftSill",
-              "ioValue": 510
-            },
-            {
-              "name": "leftHead",
-              "ioValue": 2160
-            },
-            {
-              "name": "rightWinL",
-              "ioValue": 1210
-            },
-            {
-              "name": "rightWinR",
-              "ioValue": 2090
-            },
-            {
-              "name": "rightSill",
-              "ioValue": 510
-            },
-            {
-              "name": "rightHead",
-              "ioValue": 2160
-            }
-          ],
-          "interpreterVersion": 1,
-          "code": "/** Room-side wall the alcove opens from. Drywall face at faceY, with the alcove opening and the two tall window openings cut through. mm, scan coordinates. */\nfunction run(\n  xLeft: number = -2850,\n  xRight: number = 2285,\n  faceY: number = -620,\n  wallThick: number = 165,\n  ceilingZ: number = 2575,\n  alcoveLeftX: number = -1143,\n  alcoveRightX: number = 1042,\n  leftWinL: number = -1810,\n  leftWinR: number = -1230,\n  leftSill: number = 510,\n  leftHead: number = 2165,\n  rightWinL: number = 1265,\n  rightWinR: number = 2141,\n  rightSill: number = 510,\n  rightHead: number = 2150,\n): Assembly {\n  const box = (a: number[], b: number[]) => replicad.makeBox(a, b);\n  // Cutters run 1 mm past both faces so the openings go cleanly through\n  const y0 = faceY - 1;\n  const y1 = faceY + wallThick + 1;\n  let wall = box([xLeft, faceY, 0], [xRight, faceY + wallThick, ceilingZ]);\n  wall = wall.cut(box([alcoveLeftX, y0, -1], [alcoveRightX, y1, ceilingZ + 1]));\n  wall = wall.cut(box([leftWinL, y0, leftSill], [leftWinR, y1, leftHead]));\n  wall = wall.cut(box([rightWinL, y0, rightSill], [rightWinR, y1, rightHead]));\n  return new Assembly({ geometry: wall, color: \"#efede8\", tags: [\"wall\"] });\n}\n",
-          "compiledCode": "\"use strict\";\n/** Room-side wall the alcove opens from. Drywall face at faceY, with the alcove opening and the two tall window openings cut through. mm, scan coordinates. */\nfunction run(xLeft = -2850, xRight = 2285, faceY = -620, wallThick = 165, ceilingZ = 2575, alcoveLeftX = -1143, alcoveRightX = 1042, leftWinL = -1810, leftWinR = -1230, leftSill = 510, leftHead = 2165, rightWinL = 1265, rightWinR = 2141, rightSill = 510, rightHead = 2150) {\n    const box = (a, b) => replicad.makeBox(a, b);\n    // Cutters run 1 mm past both faces so the openings go cleanly through\n    const y0 = faceY - 1;\n    const y1 = faceY + wallThick + 1;\n    let wall = box([xLeft, faceY, 0], [xRight, faceY + wallThick, ceilingZ]);\n    wall = wall.cut(box([alcoveLeftX, y0, -1], [alcoveRightX, y1, ceilingZ + 1]));\n    wall = wall.cut(box([leftWinL, y0, leftSill], [leftWinR, y1, leftHead]));\n    wall = wall.cut(box([rightWinL, y0, rightSill], [rightWinR, y1, rightHead]));\n    return new Assembly({ geometry: wall, color: \"#efede8\", tags: [\"wall\"] });\n}\n"
-        }
-      ],
-      "allConnectors": [
-        {
-          "ap2Name": "number or geometry",
-          "ap1ID": "id-1228",
-          "ap2ID": "id-1226"
-        }
-      ],
-      "fileTypeVersion": 1
-    },
-    {
-      "atomType": "Molecule",
-      "x": 0.3,
+      "x": 0.4,
       "y": 0.4,
-      "uniqueID": "id-1252",
-      "name": "Alcove Side Wall",
+      "uniqueID": "id-2274",
+      "name": "Reading Corner Space",
       "topLevel": false,
       "allAtoms": [
         {
           "atomType": "Output",
           "x": 1,
           "y": 0.5,
-          "uniqueID": "id-1254",
+          "uniqueID": "id-2276",
           "ioValues": [
             {
               "name": "number or geometry",
@@ -252,496 +39,1713 @@
           ]
         },
         {
-          "atomType": "Code",
-          "x": 0.2,
+          "atomType": "Import",
+          "x": 0.1,
           "y": 0.2,
-          "uniqueID": "id-1256",
-          "ioValues": [
-            {
-              "name": "innerX",
-              "ioValue": -1143
-            },
-            {
-              "name": "wallThick",
-              "ioValue": 165
-            },
-            {
-              "name": "frontY",
-              "ioValue": -455
-            },
-            {
-              "name": "backY",
-              "ioValue": 155
-            },
-            {
-              "name": "ceilingZ",
-              "ioValue": 2575
-            }
-          ],
-          "interpreterVersion": 1,
-          "code": "/** Alcove side wall (left one; the parent moves a copy to the right side). Inner face at innerX. mm, scan coordinates. */\nfunction run(\n  innerX: number = -1143,\n  wallThick: number = 165,\n  frontY: number = -455,\n  backY: number = 155,\n  ceilingZ: number = 2575,\n): Assembly {\n  const wall = replicad.makeBox([innerX - wallThick, frontY, 0], [innerX, backY, ceilingZ]);\n  return new Assembly({ geometry: wall, color: \"#efede8\", tags: [\"wall\"] });\n}\n",
-          "compiledCode": "\"use strict\";\n/** Alcove side wall (left one; the parent moves a copy to the right side). Inner face at innerX. mm, scan coordinates. */\nfunction run(innerX = -1143, wallThick = 165, frontY = -455, backY = 155, ceilingZ = 2575) {\n    const wall = replicad.makeBox([innerX - wallThick, frontY, 0], [innerX, backY, ceilingZ]);\n    return new Assembly({ geometry: wall, color: \"#efede8\", tags: [\"wall\"] });\n}\n"
-        }
-      ],
-      "allConnectors": [
-        {
-          "ap2Name": "number or geometry",
-          "ap1ID": "id-1256",
-          "ap2ID": "id-1254"
-        }
-      ],
-      "fileTypeVersion": 1
-    },
-    {
-      "atomType": "Move",
-      "x": 0.5,
-      "y": 0.4,
-      "uniqueID": "id-1270",
-      "ioValues": [
-        {
-          "name": "geometry",
-          "ioValue": "__GEOMETRY_INPUT__"
+          "uniqueID": "id-2278",
+          "fileName": "36136520-6CC5-459C-A21E-0A34EA9CDF2F.JPG",
+          "name": "Import",
+          "type": "JPG",
+          "repoOwner": "BarbourSmith",
+          "repoName": "Reading_corner",
+          "SVGwidth": 10,
+          "referenceWidth": 1029.8
         },
         {
-          "name": "xDist",
-          "ioValue": 2350
-        },
-        {
-          "name": "yDist",
-          "ioValue": 0
-        },
-        {
-          "name": "zDist",
-          "ioValue": 0
-        }
-      ]
-    },
-    {
-      "atomType": "Molecule",
-      "x": 0.3,
-      "y": 0.5,
-      "uniqueID": "id-1276",
-      "name": "Alcove Back Wall",
-      "topLevel": false,
-      "allAtoms": [
-        {
-          "atomType": "Output",
-          "x": 1,
+          "atomType": "Import",
+          "x": 0.1,
           "y": 0.5,
-          "uniqueID": "id-1278",
-          "ioValues": [
-            {
-              "name": "number or geometry",
-              "ioValue": "__GEOMETRY_INPUT__"
-            }
-          ]
+          "uniqueID": "id-2279",
+          "fileName": "A0832E9D-54E2-4824-8134-155E1D074B8E.JPG",
+          "name": "Import",
+          "type": "JPG",
+          "repoOwner": "BarbourSmith",
+          "repoName": "Reading_corner",
+          "SVGwidth": 10,
+          "referenceWidth": 1373.1
         },
         {
-          "atomType": "Code",
-          "x": 0.2,
-          "y": 0.2,
-          "uniqueID": "id-1280",
-          "ioValues": [
-            {
-              "name": "xLeft",
-              "ioValue": -1308
-            },
-            {
-              "name": "xRight",
-              "ioValue": 1207
-            },
-            {
-              "name": "faceY",
-              "ioValue": 155
-            },
-            {
-              "name": "wallThick",
-              "ioValue": 165
-            },
-            {
-              "name": "ceilingZ",
-              "ioValue": 2575
-            },
-            {
-              "name": "winL",
-              "ioValue": -948
-            },
-            {
-              "name": "winR",
-              "ioValue": 843
-            },
-            {
-              "name": "winSill",
-              "ioValue": 450
-            },
-            {
-              "name": "winHead",
-              "ioValue": 2180
-            }
-          ],
-          "interpreterVersion": 1,
-          "code": "/** Alcove back (window) wall. Room face at faceY, window opening cut through. mm, scan coordinates. */\nfunction run(\n  xLeft: number = -1308,\n  xRight: number = 1207,\n  faceY: number = 155,\n  wallThick: number = 165,\n  ceilingZ: number = 2575,\n  winL: number = -980,\n  winR: number = 880,\n  winSill: number = 450,\n  winHead: number = 1990,\n): Assembly {\n  const box = (a: number[], b: number[]) => replicad.makeBox(a, b);\n  let wall = box([xLeft, faceY, 0], [xRight, faceY + wallThick, ceilingZ]);\n  wall = wall.cut(box([winL, faceY - 1, winSill], [winR, faceY + wallThick + 1, winHead]));\n  return new Assembly({ geometry: wall, color: \"#efede8\", tags: [\"wall\"] });\n}\n",
-          "compiledCode": "\"use strict\";\n/** Alcove back (window) wall. Room face at faceY, window opening cut through. mm, scan coordinates. */\nfunction run(xLeft = -1308, xRight = 1207, faceY = 155, wallThick = 165, ceilingZ = 2575, winL = -980, winR = 880, winSill = 450, winHead = 1990) {\n    const box = (a, b) => replicad.makeBox(a, b);\n    let wall = box([xLeft, faceY, 0], [xRight, faceY + wallThick, ceilingZ]);\n    wall = wall.cut(box([winL, faceY - 1, winSill], [winR, faceY + wallThick + 1, winHead]));\n    return new Assembly({ geometry: wall, color: \"#efede8\", tags: [\"wall\"] });\n}\n"
-        }
-      ],
-      "allConnectors": [
-        {
-          "ap2Name": "number or geometry",
-          "ap1ID": "id-1280",
-          "ap2ID": "id-1278"
-        }
-      ],
-      "fileTypeVersion": 1
-    },
-    {
-      "atomType": "Molecule",
-      "x": 0.3,
-      "y": 0.6,
-      "uniqueID": "id-1298",
-      "name": "Wood Panel Wall",
-      "topLevel": false,
-      "allAtoms": [
-        {
-          "atomType": "Output",
-          "x": 1,
-          "y": 0.5,
-          "uniqueID": "id-1300",
-          "ioValues": [
-            {
-              "name": "number or geometry",
-              "ioValue": "__GEOMETRY_INPUT__"
-            }
-          ]
+          "atomType": "Import",
+          "x": 0.1,
+          "y": 0.7,
+          "uniqueID": "id-2280",
+          "fileName": "D038BF67-7F67-4D53-B8DB-31D83CB07D79.JPG",
+          "name": "Import",
+          "type": "JPG",
+          "repoOwner": "BarbourSmith",
+          "repoName": "Reading_corner",
+          "SVGwidth": 10,
+          "referenceWidth": 1029.8
         },
         {
-          "atomType": "Code",
-          "x": 0.2,
-          "y": 0.2,
-          "uniqueID": "id-1302",
-          "ioValues": [
-            {
-              "name": "faceX",
-              "ioValue": 2285
-            },
-            {
-              "name": "wallThick",
-              "ioValue": 165
-            },
-            {
-              "name": "yNear",
-              "ioValue": -1500
-            },
-            {
-              "name": "yFar",
-              "ioValue": -455
-            },
-            {
-              "name": "ceilingZ",
-              "ioValue": 2575
-            }
-          ],
-          "interpreterVersion": 1,
-          "code": "/** Wood-paneled wall to the right of the right window, running toward the room. Face at faceX. mm, scan coordinates. */\nfunction run(\n  faceX: number = 2285,\n  wallThick: number = 165,\n  yNear: number = -1500,\n  yFar: number = -455,\n  ceilingZ: number = 2575,\n): Assembly {\n  const wall = replicad.makeBox([faceX, yNear, 0], [faceX + wallThick, yFar, ceilingZ]);\n  return new Assembly({ geometry: wall, color: \"#b8895a\", tags: [\"wall\"] });\n}\n",
-          "compiledCode": "\"use strict\";\n/** Wood-paneled wall to the right of the right window, running toward the room. Face at faceX. mm, scan coordinates. */\nfunction run(faceX = 2285, wallThick = 165, yNear = -1500, yFar = -455, ceilingZ = 2575) {\n    const wall = replicad.makeBox([faceX, yNear, 0], [faceX + wallThick, yFar, ceilingZ]);\n    return new Assembly({ geometry: wall, color: \"#b8895a\", tags: [\"wall\"] });\n}\n"
-        }
-      ],
-      "allConnectors": [
-        {
-          "ap2Name": "number or geometry",
-          "ap1ID": "id-1302",
-          "ap2ID": "id-1300"
-        }
-      ],
-      "fileTypeVersion": 1
-    },
-    {
-      "atomType": "Molecule",
-      "x": 0.3,
-      "y": 0.7,
-      "uniqueID": "id-1316",
-      "name": "Seat Base",
-      "topLevel": false,
-      "allAtoms": [
-        {
-          "atomType": "Output",
-          "x": 1,
-          "y": 0.5,
-          "uniqueID": "id-1318",
-          "ioValues": [
-            {
-              "name": "number or geometry",
-              "ioValue": "__GEOMETRY_INPUT__"
-            }
-          ]
+          "atomType": "Import",
+          "x": 0.6,
+          "y": 0.9,
+          "uniqueID": "id-2281",
+          "fileName": "AbundanceScan-2026-10-31_095710.glb",
+          "name": "Import",
+          "type": "GLB",
+          "repoOwner": "BarbourSmith",
+          "repoName": "Reading_corner",
+          "SVGwidth": 10
         },
         {
-          "atomType": "Code",
-          "x": 0.2,
-          "y": 0.2,
-          "uniqueID": "id-1320",
-          "ioValues": [
-            {
-              "name": "xLeft",
-              "ioValue": -1143
-            },
-            {
-              "name": "xRight",
-              "ioValue": 1042
-            },
-            {
-              "name": "frontY",
-              "ioValue": -545
-            },
-            {
-              "name": "backY",
-              "ioValue": 155
-            },
-            {
-              "name": "baseHeight",
-              "ioValue": 265
-            }
-          ],
-          "interpreterVersion": 1,
-          "code": "/** Built-in window seat base, wall to wall in the alcove. Front face at frontY. mm, scan coordinates. */\nfunction run(\n  xLeft: number = -1143,\n  xRight: number = 1042,\n  frontY: number = -545,\n  backY: number = 155,\n  baseHeight: number = 265,\n): Assembly {\n  const base = replicad.makeBox([xLeft, frontY, 0], [xRight, backY, baseHeight]);\n  return new Assembly({ geometry: base, color: \"#f4f4f2\", tags: [\"seat\"] });\n}\n",
-          "compiledCode": "\"use strict\";\n/** Built-in window seat base, wall to wall in the alcove. Front face at frontY. mm, scan coordinates. */\nfunction run(xLeft = -1143, xRight = 1042, frontY = -545, backY = 155, baseHeight = 265) {\n    const base = replicad.makeBox([xLeft, frontY, 0], [xRight, backY, baseHeight]);\n    return new Assembly({ geometry: base, color: \"#f4f4f2\", tags: [\"seat\"] });\n}\n"
-        }
-      ],
-      "allConnectors": [
-        {
-          "ap2Name": "number or geometry",
-          "ap1ID": "id-1320",
-          "ap2ID": "id-1318"
-        }
-      ],
-      "fileTypeVersion": 1
-    },
-    {
-      "atomType": "Molecule",
-      "x": 0.3,
-      "y": 0.8,
-      "uniqueID": "id-1334",
-      "name": "Seat Top",
-      "topLevel": false,
-      "allAtoms": [
-        {
-          "atomType": "Output",
-          "x": 1,
-          "y": 0.5,
-          "uniqueID": "id-1336",
-          "ioValues": [
-            {
-              "name": "number or geometry",
-              "ioValue": "__GEOMETRY_INPUT__"
-            }
-          ]
-        },
-        {
-          "atomType": "Code",
-          "x": 0.2,
-          "y": 0.2,
-          "uniqueID": "id-1338",
-          "ioValues": [
-            {
-              "name": "xLeft",
-              "ioValue": -1143
-            },
-            {
-              "name": "xRight",
-              "ioValue": 1042
-            },
-            {
-              "name": "frontY",
-              "ioValue": -560
-            },
-            {
-              "name": "backY",
-              "ioValue": 155
-            },
-            {
-              "name": "seatHeight",
-              "ioValue": 290
-            },
-            {
-              "name": "boardThick",
-              "ioValue": 25
-            }
-          ],
-          "interpreterVersion": 1,
-          "code": "/** Window seat top board; sits on the base and overhangs its front. Top at seatHeight (scan ~290). mm, scan coordinates. */\nfunction run(\n  xLeft: number = -1143,\n  xRight: number = 1042,\n  frontY: number = -560,\n  backY: number = 155,\n  seatHeight: number = 290,\n  boardThick: number = 25,\n): Assembly {\n  const top = replicad.makeBox([xLeft, frontY, seatHeight - boardThick], [xRight, backY, seatHeight]);\n  return new Assembly({ geometry: top, color: \"#fbfbfa\", tags: [\"seat\"] });\n}\n",
-          "compiledCode": "\"use strict\";\n/** Window seat top board; sits on the base and overhangs its front. Top at seatHeight (scan ~290). mm, scan coordinates. */\nfunction run(xLeft = -1143, xRight = 1042, frontY = -560, backY = 155, seatHeight = 290, boardThick = 25) {\n    const top = replicad.makeBox([xLeft, frontY, seatHeight - boardThick], [xRight, backY, seatHeight]);\n    return new Assembly({ geometry: top, color: \"#fbfbfa\", tags: [\"seat\"] });\n}\n"
-        }
-      ],
-      "allConnectors": [
-        {
-          "ap2Name": "number or geometry",
-          "ap1ID": "id-1338",
-          "ap2ID": "id-1336"
-        }
-      ],
-      "fileTypeVersion": 1
-    },
-    {
-      "atomType": "Molecule",
-      "x": 0.6,
-      "y": 0.5,
-      "uniqueID": "id-1353",
-      "name": "Alcove Window",
-      "topLevel": false,
-      "allAtoms": [
-        {
-          "atomType": "Output",
-          "x": 1,
-          "y": 0.5,
-          "uniqueID": "id-1355",
-          "ioValues": [
-            {
-              "name": "number or geometry",
-              "ioValue": "__GEOMETRY_INPUT__"
-            }
-          ]
-        },
-        {
-          "atomType": "Code",
-          "x": 0.2,
-          "y": 0.2,
-          "uniqueID": "id-1357",
-          "ioValues": [
-            {
-              "name": "winL",
-              "ioValue": -948
-            },
-            {
-              "name": "winR",
-              "ioValue": 843
-            },
-            {
-              "name": "winSill",
-              "ioValue": 450
-            },
-            {
-              "name": "winHead",
-              "ioValue": 2180
-            },
-            {
-              "name": "outerY",
-              "ioValue": 320
-            },
-            {
-              "name": "frameDepth",
-              "ioValue": 60
-            },
-            {
-              "name": "frameWidth",
-              "ioValue": 45
-            }
-          ],
-          "interpreterVersion": 1,
-          "code": "/** Alcove Window frame: white sash frame filling the rough opening, set at the outside face of the wall (outerY). mm, scan coordinates. */\nfunction run(\n  winL: number = -980,\n  winR: number = 880,\n  winSill: number = 450,\n  winHead: number = 1990,\n  outerY: number = 320,\n  frameDepth: number = 60,\n  frameWidth: number = 45,\n): Assembly {\n  const box = (a: number[], b: number[]) => replicad.makeBox(a, b);\n  const y0 = outerY - frameDepth;\n  const outer = box([winL, y0, winSill], [winR, outerY, winHead]);\n  const inner = box([winL + frameWidth, y0 - 1, winSill + frameWidth], [winR - frameWidth, outerY + 1, winHead - frameWidth]);\n  return new Assembly({ geometry: outer.cut(inner), color: \"#f7f7f5\", tags: [\"window\"] });\n}\n",
-          "compiledCode": "\"use strict\";\n/** Alcove Window frame: white sash frame filling the rough opening, set at the outside face of the wall (outerY). mm, scan coordinates. */\nfunction run(winL = -980, winR = 880, winSill = 450, winHead = 1990, outerY = 320, frameDepth = 60, frameWidth = 45) {\n    const box = (a, b) => replicad.makeBox(a, b);\n    const y0 = outerY - frameDepth;\n    const outer = box([winL, y0, winSill], [winR, outerY, winHead]);\n    const inner = box([winL + frameWidth, y0 - 1, winSill + frameWidth], [winR - frameWidth, outerY + 1, winHead - frameWidth]);\n    return new Assembly({ geometry: outer.cut(inner), color: \"#f7f7f5\", tags: [\"window\"] });\n}\n"
-        },
-        {
-          "atomType": "Code",
-          "x": 0.3,
-          "y": 0.3,
-          "uniqueID": "id-1373",
-          "ioValues": [
-            {
-              "name": "winL",
-              "ioValue": -948
-            },
-            {
-              "name": "winR",
-              "ioValue": 843
-            },
-            {
-              "name": "winSill",
-              "ioValue": 450
-            },
-            {
-              "name": "winHead",
-              "ioValue": 2180
-            },
-            {
-              "name": "outerY",
-              "ioValue": 320
-            },
-            {
-              "name": "frameDepth",
-              "ioValue": 60
-            },
-            {
-              "name": "frameWidth",
-              "ioValue": 45
-            },
-            {
-              "name": "glassThick",
-              "ioValue": 6
-            }
-          ],
-          "interpreterVersion": 1,
-          "code": "/** Alcove Window glass pane, centred in the frame depth. mm, scan coordinates. */\nfunction run(\n  winL: number = -980,\n  winR: number = 880,\n  winSill: number = 450,\n  winHead: number = 1990,\n  outerY: number = 320,\n  frameDepth: number = 60,\n  frameWidth: number = 45,\n  glassThick: number = 6,\n): Assembly {\n  const midY = outerY - frameDepth / 2;\n  const pane = replicad.makeBox(\n    [winL + frameWidth, midY - glassThick / 2, winSill + frameWidth],\n    [winR - frameWidth, midY + glassThick / 2, winHead - frameWidth],\n  );\n  return new Assembly({ geometry: pane, color: \"#cfe6ee\", tags: [\"window\", \"glass\"] });\n}\n",
-          "compiledCode": "\"use strict\";\n/** Alcove Window glass pane, centred in the frame depth. mm, scan coordinates. */\nfunction run(winL = -980, winR = 880, winSill = 450, winHead = 1990, outerY = 320, frameDepth = 60, frameWidth = 45, glassThick = 6) {\n    const midY = outerY - frameDepth / 2;\n    const pane = replicad.makeBox([winL + frameWidth, midY - glassThick / 2, winSill + frameWidth], [winR - frameWidth, midY + glassThick / 2, winHead - frameWidth]);\n    return new Assembly({ geometry: pane, color: \"#cfe6ee\", tags: [\"window\", \"glass\"] });\n}\n"
-        },
-        {
-          "atomType": "Code",
-          "x": 0.3,
+          "atomType": "Move",
+          "x": 0.5,
           "y": 0.4,
-          "uniqueID": "id-1390",
+          "uniqueID": "id-2282",
           "ioValues": [
             {
-              "name": "winL",
-              "ioValue": -948
+              "name": "geometry",
+              "ioValue": "__GEOMETRY_INPUT__"
             },
             {
-              "name": "winR",
-              "ioValue": 843
+              "name": "xDist",
+              "ioValue": 2350
             },
             {
-              "name": "winSill",
-              "ioValue": 450
+              "name": "yDist",
+              "ioValue": 0
             },
             {
-              "name": "winHead",
-              "ioValue": 2180
-            },
-            {
-              "name": "outerY",
-              "ioValue": 320
-            },
-            {
-              "name": "frameDepth",
-              "ioValue": 60
-            },
-            {
-              "name": "frameWidth",
-              "ioValue": 45
-            },
-            {
-              "name": "glassThick",
-              "ioValue": 6
-            },
-            {
-              "name": "barCount",
-              "ioValue": 3
-            },
-            {
-              "name": "barWidth",
-              "ioValue": 30
-            },
-            {
-              "name": "barDepth",
-              "ioValue": 10
+              "name": "zDist",
+              "ioValue": 0
             }
-          ],
-          "interpreterVersion": 1,
-          "code": "/** Alcove Window black vertical grille bars, evenly spaced on the room side of the glass. mm, scan coordinates. */\nfunction run(\n  winL: number = -980,\n  winR: number = 880,\n  winSill: number = 450,\n  winHead: number = 1990,\n  outerY: number = 320,\n  frameDepth: number = 60,\n  frameWidth: number = 45,\n  glassThick: number = 6,\n  barCount: number = 3,\n  barWidth: number = 30,\n  barDepth: number = 10,\n): Assembly {\n  const midY = outerY - frameDepth / 2;\n  const yGlass = midY - glassThick / 2; // room-side face of the glass\n  const x0 = winL + frameWidth;\n  const span = winR - frameWidth - x0;\n  let bars = null;\n  for (let i = 1; i <= barCount; i++) {\n    const cx = x0 + (span * i) / (barCount + 1);\n    const bar = replicad.makeBox(\n      [cx - barWidth / 2, yGlass - barDepth, winSill + frameWidth],\n      [cx + barWidth / 2, yGlass, winHead - frameWidth],\n    );\n    bars = bars ? bars.fuse(bar) : bar;\n  }\n  return new Assembly({ geometry: bars, color: \"#262626\", tags: [\"window\"] });\n}\n",
-          "compiledCode": "\"use strict\";\n/** Alcove Window black vertical grille bars, evenly spaced on the room side of the glass. mm, scan coordinates. */\nfunction run(winL = -980, winR = 880, winSill = 450, winHead = 1990, outerY = 320, frameDepth = 60, frameWidth = 45, glassThick = 6, barCount = 3, barWidth = 30, barDepth = 10) {\n    const midY = outerY - frameDepth / 2;\n    const yGlass = midY - glassThick / 2; // room-side face of the glass\n    const x0 = winL + frameWidth;\n    const span = winR - frameWidth - x0;\n    let bars = null;\n    for (let i = 1; i <= barCount; i++) {\n        const cx = x0 + (span * i) / (barCount + 1);\n        const bar = replicad.makeBox([cx - barWidth / 2, yGlass - barDepth, winSill + frameWidth], [cx + barWidth / 2, yGlass, winHead - frameWidth]);\n        bars = bars ? bars.fuse(bar) : bar;\n    }\n    return new Assembly({ geometry: bars, color: \"#262626\", tags: [\"window\"] });\n}\n"
+          ]
         },
         {
           "atomType": "Assembly",
-          "x": 0.4,
+          "x": 0.7,
+          "y": 0.4,
+          "uniqueID": "id-2283",
+          "ioValues": [
+            {
+              "name": "makeDisjoint",
+              "ioValue": false
+            },
+            {
+              "name": "Shape 1",
+              "ioValue": "__GEOMETRY_INPUT__"
+            },
+            {
+              "name": "Shape2",
+              "ioValue": "__GEOMETRY_INPUT__"
+            },
+            {
+              "name": "Shape3",
+              "ioValue": "__GEOMETRY_INPUT__"
+            },
+            {
+              "name": "Shape4",
+              "ioValue": "__GEOMETRY_INPUT__"
+            },
+            {
+              "name": "Shape5",
+              "ioValue": "__GEOMETRY_INPUT__"
+            },
+            {
+              "name": "Shape6",
+              "ioValue": "__GEOMETRY_INPUT__"
+            },
+            {
+              "name": "Shape7",
+              "ioValue": "__GEOMETRY_INPUT__"
+            },
+            {
+              "name": "Shape8",
+              "ioValue": "__GEOMETRY_INPUT__"
+            },
+            {
+              "name": "Shape9",
+              "ioValue": "__GEOMETRY_INPUT__"
+            },
+            {
+              "name": "Shape10",
+              "ioValue": "__GEOMETRY_INPUT__"
+            },
+            {
+              "name": "Shape11",
+              "ioValue": "__GEOMETRY_INPUT__"
+            },
+            {
+              "name": "Shape12",
+              "ioValue": "__GEOMETRY_INPUT__"
+            },
+            {
+              "name": "Shape13",
+              "ioValue": "__GEOMETRY_INPUT__"
+            },
+            {
+              "name": "Shape14",
+              "ioValue": "__GEOMETRY_INPUT__"
+            },
+            {
+              "name": "Shape15",
+              "ioValue": "__GEOMETRY_INPUT__"
+            }
+          ]
+        },
+        {
+          "atomType": "Tag",
+          "x": 0.7,
+          "y": 0.8,
+          "uniqueID": "id-2284",
+          "name": "scan",
+          "ioValues": [
+            {
+              "name": "geometry",
+              "ioValue": "__GEOMETRY_INPUT__"
+            }
+          ],
+          "tags": [
+            "scan"
+          ]
+        },
+        {
+          "atomType": "Rotate",
+          "x": 0.1,
+          "y": 0.2,
+          "uniqueID": "id-2285",
+          "ioValues": [
+            {
+              "name": "geometry",
+              "ioValue": "__GEOMETRY_INPUT__"
+            },
+            {
+              "name": "x-axis degrees",
+              "ioValue": 89.14
+            },
+            {
+              "name": "y-axis degrees",
+              "ioValue": -1.21
+            },
+            {
+              "name": "z-axis degrees",
+              "ioValue": -18.05
+            }
+          ]
+        },
+        {
+          "atomType": "Move",
+          "x": 0.2,
+          "y": 0.2,
+          "uniqueID": "id-2286",
+          "ioValues": [
+            {
+              "name": "geometry",
+              "ioValue": "__GEOMETRY_INPUT__"
+            },
+            {
+              "name": "xDist",
+              "ioValue": 621.9
+            },
+            {
+              "name": "yDist",
+              "ioValue": -2162.4
+            },
+            {
+              "name": "zDist",
+              "ioValue": 1460.7
+            }
+          ]
+        },
+        {
+          "atomType": "Rotate",
+          "x": 0.1,
+          "y": 0.3,
+          "uniqueID": "id-2287",
+          "ioValues": [
+            {
+              "name": "geometry",
+              "ioValue": "__GEOMETRY_INPUT__"
+            },
+            {
+              "name": "x-axis degrees",
+              "ioValue": 86.41
+            },
+            {
+              "name": "y-axis degrees",
+              "ioValue": 1.43
+            },
+            {
+              "name": "z-axis degrees",
+              "ioValue": 20.56
+            }
+          ]
+        },
+        {
+          "atomType": "Move",
+          "x": 0.2,
+          "y": 0.3,
+          "uniqueID": "id-2288",
+          "ioValues": [
+            {
+              "name": "geometry",
+              "ioValue": "__GEOMETRY_INPUT__"
+            },
+            {
+              "name": "xDist",
+              "ioValue": 1013.2
+            },
+            {
+              "name": "yDist",
+              "ioValue": -2428.1
+            },
+            {
+              "name": "zDist",
+              "ioValue": 1464
+            }
+          ]
+        },
+        {
+          "atomType": "Rotate",
+          "x": 0.1,
+          "y": 0.4,
+          "uniqueID": "id-2289",
+          "ioValues": [
+            {
+              "name": "geometry",
+              "ioValue": "__GEOMETRY_INPUT__"
+            },
+            {
+              "name": "x-axis degrees",
+              "ioValue": 88.63
+            },
+            {
+              "name": "y-axis degrees",
+              "ioValue": 1.77
+            },
+            {
+              "name": "z-axis degrees",
+              "ioValue": 31.51
+            }
+          ]
+        },
+        {
+          "atomType": "Move",
+          "x": 0.2,
+          "y": 0.4,
+          "uniqueID": "id-2290",
+          "ioValues": [
+            {
+              "name": "geometry",
+              "ioValue": "__GEOMETRY_INPUT__"
+            },
+            {
+              "name": "xDist",
+              "ioValue": -429.2
+            },
+            {
+              "name": "yDist",
+              "ioValue": -1600.4
+            },
+            {
+              "name": "zDist",
+              "ioValue": 1403.6
+            }
+          ]
+        },
+        {
+          "atomType": "Assembly",
+          "x": 0.2,
+          "y": 0.3,
+          "uniqueID": "id-2291",
+          "ioValues": [
+            {
+              "name": "makeDisjoint",
+              "ioValue": false
+            },
+            {
+              "name": "Shape 1",
+              "ioValue": "__GEOMETRY_INPUT__"
+            },
+            {
+              "name": "Shape2",
+              "ioValue": "__GEOMETRY_INPUT__"
+            },
+            {
+              "name": "Shape3",
+              "ioValue": "__GEOMETRY_INPUT__"
+            },
+            {
+              "name": "Shape4",
+              "ioValue": "__GEOMETRY_INPUT__"
+            }
+          ]
+        },
+        {
+          "atomType": "Tag",
+          "x": 0.3,
+          "y": 0.3,
+          "uniqueID": "id-2292",
+          "name": "photo",
+          "ioValues": [
+            {
+              "name": "geometry",
+              "ioValue": "__GEOMETRY_INPUT__"
+            }
+          ],
+          "tags": [
+            "photo"
+          ]
+        },
+        {
+          "atomType": "Molecule",
+          "x": 0.3,
+          "y": 0.2,
+          "uniqueID": "id-2293",
+          "name": "Floor",
+          "topLevel": false,
+          "allAtoms": [
+            {
+              "atomType": "Output",
+              "x": 1,
+              "y": 0.5,
+              "uniqueID": "id-2294",
+              "ioValues": [
+                {
+                  "name": "number or geometry",
+                  "ioValue": "__GEOMETRY_INPUT__"
+                }
+              ]
+            },
+            {
+              "atomType": "Code",
+              "x": 0.2,
+              "y": 0.2,
+              "uniqueID": "id-2295",
+              "ioValues": [
+                {
+                  "name": "xMin",
+                  "ioValue": -2850
+                },
+                {
+                  "name": "xMax",
+                  "ioValue": 2285
+                },
+                {
+                  "name": "yMin",
+                  "ioValue": -2400
+                },
+                {
+                  "name": "yMax",
+                  "ioValue": 320
+                },
+                {
+                  "name": "thickness",
+                  "ioValue": 20
+                }
+              ],
+              "interpreterVersion": 1,
+              "code": "/** Floor slab; top face at z = 0 (scan floor level). Dimensions in mm, scan coordinates. */\nfunction run(\n  xMin: number = -2850,\n  xMax: number = 2285,\n  yMin: number = -2400,\n  yMax: number = 320,\n  thickness: number = 20,\n): Assembly {\n  const slab = replicad.makeBox([xMin, yMin, -thickness], [xMax, yMax, 0]);\n  return new Assembly({ geometry: slab, color: \"#7a4a2e\" });\n}\n",
+              "compiledCode": "\"use strict\";\n/** Floor slab; top face at z = 0 (scan floor level). Dimensions in mm, scan coordinates. */\nfunction run(xMin = -2850, xMax = 2285, yMin = -2400, yMax = 320, thickness = 20) {\n    const slab = replicad.makeBox([xMin, yMin, -thickness], [xMax, yMax, 0]);\n    return new Assembly({ geometry: slab, color: \"#7a4a2e\" });\n}\n"
+            }
+          ],
+          "allConnectors": [
+            {
+              "ap2Name": "number or geometry",
+              "ap1ID": "id-2295",
+              "ap2ID": "id-2294"
+            }
+          ],
+          "fileTypeVersion": 1
+        },
+        {
+          "atomType": "Molecule",
+          "x": 0.3,
+          "y": 0.3,
+          "uniqueID": "id-2296",
+          "name": "Room Wall",
+          "topLevel": false,
+          "allAtoms": [
+            {
+              "atomType": "Output",
+              "x": 1,
+              "y": 0.5,
+              "uniqueID": "id-2297",
+              "ioValues": [
+                {
+                  "name": "number or geometry",
+                  "ioValue": "__GEOMETRY_INPUT__"
+                }
+              ]
+            },
+            {
+              "atomType": "Code",
+              "x": 0.2,
+              "y": 0.2,
+              "uniqueID": "id-2298",
+              "ioValues": [
+                {
+                  "name": "xLeft",
+                  "ioValue": -2850
+                },
+                {
+                  "name": "xRight",
+                  "ioValue": 2285
+                },
+                {
+                  "name": "faceY",
+                  "ioValue": -620
+                },
+                {
+                  "name": "wallThick",
+                  "ioValue": 165
+                },
+                {
+                  "name": "ceilingZ",
+                  "ioValue": 2575
+                },
+                {
+                  "name": "alcoveLeftX",
+                  "ioValue": -1143
+                },
+                {
+                  "name": "alcoveRightX",
+                  "ioValue": 1042
+                },
+                {
+                  "name": "leftWinL",
+                  "ioValue": -2161
+                },
+                {
+                  "name": "leftWinR",
+                  "ioValue": -1281
+                },
+                {
+                  "name": "leftSill",
+                  "ioValue": 510
+                },
+                {
+                  "name": "leftHead",
+                  "ioValue": 2160
+                },
+                {
+                  "name": "rightWinL",
+                  "ioValue": 1210
+                },
+                {
+                  "name": "rightWinR",
+                  "ioValue": 2090
+                },
+                {
+                  "name": "rightSill",
+                  "ioValue": 510
+                },
+                {
+                  "name": "rightHead",
+                  "ioValue": 2160
+                }
+              ],
+              "interpreterVersion": 1,
+              "code": "/** Room-side wall the alcove opens from. Drywall face at faceY, with the alcove opening and the two tall window openings cut through. mm, scan coordinates. */\nfunction run(\n  xLeft: number = -2850,\n  xRight: number = 2285,\n  faceY: number = -620,\n  wallThick: number = 165,\n  ceilingZ: number = 2575,\n  alcoveLeftX: number = -1143,\n  alcoveRightX: number = 1042,\n  leftWinL: number = -1810,\n  leftWinR: number = -1230,\n  leftSill: number = 510,\n  leftHead: number = 2165,\n  rightWinL: number = 1265,\n  rightWinR: number = 2141,\n  rightSill: number = 510,\n  rightHead: number = 2150,\n): Assembly {\n  const box = (a: number[], b: number[]) => replicad.makeBox(a, b);\n  // Cutters run 1 mm past both faces so the openings go cleanly through\n  const y0 = faceY - 1;\n  const y1 = faceY + wallThick + 1;\n  let wall = box([xLeft, faceY, 0], [xRight, faceY + wallThick, ceilingZ]);\n  wall = wall.cut(box([alcoveLeftX, y0, -1], [alcoveRightX, y1, ceilingZ + 1]));\n  wall = wall.cut(box([leftWinL, y0, leftSill], [leftWinR, y1, leftHead]));\n  wall = wall.cut(box([rightWinL, y0, rightSill], [rightWinR, y1, rightHead]));\n  return new Assembly({ geometry: wall, color: \"#efede8\" });\n}\n",
+              "compiledCode": "\"use strict\";\n/** Room-side wall the alcove opens from. Drywall face at faceY, with the alcove opening and the two tall window openings cut through. mm, scan coordinates. */\nfunction run(xLeft = -2850, xRight = 2285, faceY = -620, wallThick = 165, ceilingZ = 2575, alcoveLeftX = -1143, alcoveRightX = 1042, leftWinL = -1810, leftWinR = -1230, leftSill = 510, leftHead = 2165, rightWinL = 1265, rightWinR = 2141, rightSill = 510, rightHead = 2150) {\n    const box = (a, b) => replicad.makeBox(a, b);\n    // Cutters run 1 mm past both faces so the openings go cleanly through\n    const y0 = faceY - 1;\n    const y1 = faceY + wallThick + 1;\n    let wall = box([xLeft, faceY, 0], [xRight, faceY + wallThick, ceilingZ]);\n    wall = wall.cut(box([alcoveLeftX, y0, -1], [alcoveRightX, y1, ceilingZ + 1]));\n    wall = wall.cut(box([leftWinL, y0, leftSill], [leftWinR, y1, leftHead]));\n    wall = wall.cut(box([rightWinL, y0, rightSill], [rightWinR, y1, rightHead]));\n    return new Assembly({ geometry: wall, color: \"#efede8\" });\n}\n"
+            }
+          ],
+          "allConnectors": [
+            {
+              "ap2Name": "number or geometry",
+              "ap1ID": "id-2298",
+              "ap2ID": "id-2297"
+            }
+          ],
+          "fileTypeVersion": 1
+        },
+        {
+          "atomType": "Molecule",
+          "x": 0.3,
+          "y": 0.4,
+          "uniqueID": "id-2299",
+          "name": "Alcove Side Wall",
+          "topLevel": false,
+          "allAtoms": [
+            {
+              "atomType": "Output",
+              "x": 1,
+              "y": 0.5,
+              "uniqueID": "id-2300",
+              "ioValues": [
+                {
+                  "name": "number or geometry",
+                  "ioValue": "__GEOMETRY_INPUT__"
+                }
+              ]
+            },
+            {
+              "atomType": "Code",
+              "x": 0.2,
+              "y": 0.2,
+              "uniqueID": "id-2301",
+              "ioValues": [
+                {
+                  "name": "innerX",
+                  "ioValue": -1143
+                },
+                {
+                  "name": "wallThick",
+                  "ioValue": 165
+                },
+                {
+                  "name": "frontY",
+                  "ioValue": -455
+                },
+                {
+                  "name": "backY",
+                  "ioValue": 155
+                },
+                {
+                  "name": "ceilingZ",
+                  "ioValue": 2575
+                }
+              ],
+              "interpreterVersion": 1,
+              "code": "/** Alcove side wall (left one; the parent moves a copy to the right side). Inner face at innerX. mm, scan coordinates. */\nfunction run(\n  innerX: number = -1143,\n  wallThick: number = 165,\n  frontY: number = -455,\n  backY: number = 155,\n  ceilingZ: number = 2575,\n): Assembly {\n  const wall = replicad.makeBox([innerX - wallThick, frontY, 0], [innerX, backY, ceilingZ]);\n  return new Assembly({ geometry: wall, color: \"#efede8\" });\n}\n",
+              "compiledCode": "\"use strict\";\n/** Alcove side wall (left one; the parent moves a copy to the right side). Inner face at innerX. mm, scan coordinates. */\nfunction run(innerX = -1143, wallThick = 165, frontY = -455, backY = 155, ceilingZ = 2575) {\n    const wall = replicad.makeBox([innerX - wallThick, frontY, 0], [innerX, backY, ceilingZ]);\n    return new Assembly({ geometry: wall, color: \"#efede8\" });\n}\n"
+            }
+          ],
+          "allConnectors": [
+            {
+              "ap2Name": "number or geometry",
+              "ap1ID": "id-2301",
+              "ap2ID": "id-2300"
+            }
+          ],
+          "fileTypeVersion": 1
+        },
+        {
+          "atomType": "Molecule",
+          "x": 0.3,
+          "y": 0.5,
+          "uniqueID": "id-2302",
+          "name": "Alcove Back Wall",
+          "topLevel": false,
+          "allAtoms": [
+            {
+              "atomType": "Output",
+              "x": 1,
+              "y": 0.5,
+              "uniqueID": "id-2303",
+              "ioValues": [
+                {
+                  "name": "number or geometry",
+                  "ioValue": "__GEOMETRY_INPUT__"
+                }
+              ]
+            },
+            {
+              "atomType": "Code",
+              "x": 0.2,
+              "y": 0.2,
+              "uniqueID": "id-2304",
+              "ioValues": [
+                {
+                  "name": "xLeft",
+                  "ioValue": -1308
+                },
+                {
+                  "name": "xRight",
+                  "ioValue": 1207
+                },
+                {
+                  "name": "faceY",
+                  "ioValue": 155
+                },
+                {
+                  "name": "wallThick",
+                  "ioValue": 165
+                },
+                {
+                  "name": "ceilingZ",
+                  "ioValue": 2575
+                },
+                {
+                  "name": "winL",
+                  "ioValue": -948
+                },
+                {
+                  "name": "winR",
+                  "ioValue": 843
+                },
+                {
+                  "name": "winSill",
+                  "ioValue": 450
+                },
+                {
+                  "name": "winHead",
+                  "ioValue": 2180
+                }
+              ],
+              "interpreterVersion": 1,
+              "code": "/** Alcove back (window) wall. Room face at faceY, window opening cut through. mm, scan coordinates. */\nfunction run(\n  xLeft: number = -1308,\n  xRight: number = 1207,\n  faceY: number = 155,\n  wallThick: number = 165,\n  ceilingZ: number = 2575,\n  winL: number = -980,\n  winR: number = 880,\n  winSill: number = 450,\n  winHead: number = 1990,\n): Assembly {\n  const box = (a: number[], b: number[]) => replicad.makeBox(a, b);\n  let wall = box([xLeft, faceY, 0], [xRight, faceY + wallThick, ceilingZ]);\n  wall = wall.cut(box([winL, faceY - 1, winSill], [winR, faceY + wallThick + 1, winHead]));\n  return new Assembly({ geometry: wall, color: \"#efede8\" });\n}\n",
+              "compiledCode": "\"use strict\";\n/** Alcove back (window) wall. Room face at faceY, window opening cut through. mm, scan coordinates. */\nfunction run(xLeft = -1308, xRight = 1207, faceY = 155, wallThick = 165, ceilingZ = 2575, winL = -980, winR = 880, winSill = 450, winHead = 1990) {\n    const box = (a, b) => replicad.makeBox(a, b);\n    let wall = box([xLeft, faceY, 0], [xRight, faceY + wallThick, ceilingZ]);\n    wall = wall.cut(box([winL, faceY - 1, winSill], [winR, faceY + wallThick + 1, winHead]));\n    return new Assembly({ geometry: wall, color: \"#efede8\" });\n}\n"
+            }
+          ],
+          "allConnectors": [
+            {
+              "ap2Name": "number or geometry",
+              "ap1ID": "id-2304",
+              "ap2ID": "id-2303"
+            }
+          ],
+          "fileTypeVersion": 1
+        },
+        {
+          "atomType": "Molecule",
+          "x": 0.3,
           "y": 0.6,
-          "uniqueID": "id-1410",
+          "uniqueID": "id-2305",
+          "name": "Wood Panel Wall",
+          "topLevel": false,
+          "allAtoms": [
+            {
+              "atomType": "Output",
+              "x": 1,
+              "y": 0.5,
+              "uniqueID": "id-2306",
+              "ioValues": [
+                {
+                  "name": "number or geometry",
+                  "ioValue": "__GEOMETRY_INPUT__"
+                }
+              ]
+            },
+            {
+              "atomType": "Code",
+              "x": 0.2,
+              "y": 0.2,
+              "uniqueID": "id-2307",
+              "ioValues": [
+                {
+                  "name": "faceX",
+                  "ioValue": 2285
+                },
+                {
+                  "name": "wallThick",
+                  "ioValue": 165
+                },
+                {
+                  "name": "yNear",
+                  "ioValue": -1500
+                },
+                {
+                  "name": "yFar",
+                  "ioValue": -455
+                },
+                {
+                  "name": "ceilingZ",
+                  "ioValue": 2575
+                }
+              ],
+              "interpreterVersion": 1,
+              "code": "/** Wood-paneled wall to the right of the right window, running toward the room. Face at faceX. mm, scan coordinates. */\nfunction run(\n  faceX: number = 2285,\n  wallThick: number = 165,\n  yNear: number = -1500,\n  yFar: number = -455,\n  ceilingZ: number = 2575,\n): Assembly {\n  const wall = replicad.makeBox([faceX, yNear, 0], [faceX + wallThick, yFar, ceilingZ]);\n  return new Assembly({ geometry: wall, color: \"#b8895a\" });\n}\n",
+              "compiledCode": "\"use strict\";\n/** Wood-paneled wall to the right of the right window, running toward the room. Face at faceX. mm, scan coordinates. */\nfunction run(faceX = 2285, wallThick = 165, yNear = -1500, yFar = -455, ceilingZ = 2575) {\n    const wall = replicad.makeBox([faceX, yNear, 0], [faceX + wallThick, yFar, ceilingZ]);\n    return new Assembly({ geometry: wall, color: \"#b8895a\" });\n}\n"
+            }
+          ],
+          "allConnectors": [
+            {
+              "ap2Name": "number or geometry",
+              "ap1ID": "id-2307",
+              "ap2ID": "id-2306"
+            }
+          ],
+          "fileTypeVersion": 1
+        },
+        {
+          "atomType": "Molecule",
+          "x": 0.3,
+          "y": 0.7,
+          "uniqueID": "id-2308",
+          "name": "Seat Base",
+          "topLevel": false,
+          "allAtoms": [
+            {
+              "atomType": "Output",
+              "x": 1,
+              "y": 0.5,
+              "uniqueID": "id-2309",
+              "ioValues": [
+                {
+                  "name": "number or geometry",
+                  "ioValue": "__GEOMETRY_INPUT__"
+                }
+              ]
+            },
+            {
+              "atomType": "Code",
+              "x": 0.2,
+              "y": 0.2,
+              "uniqueID": "id-2310",
+              "ioValues": [
+                {
+                  "name": "xLeft",
+                  "ioValue": -1143
+                },
+                {
+                  "name": "xRight",
+                  "ioValue": 1042
+                },
+                {
+                  "name": "frontY",
+                  "ioValue": -545
+                },
+                {
+                  "name": "backY",
+                  "ioValue": 155
+                },
+                {
+                  "name": "baseHeight",
+                  "ioValue": 265
+                }
+              ],
+              "interpreterVersion": 1,
+              "code": "/** Built-in window seat base, wall to wall in the alcove. Front face at frontY. mm, scan coordinates. */\nfunction run(\n  xLeft: number = -1143,\n  xRight: number = 1042,\n  frontY: number = -545,\n  backY: number = 155,\n  baseHeight: number = 265,\n): Assembly {\n  const base = replicad.makeBox([xLeft, frontY, 0], [xRight, backY, baseHeight]);\n  return new Assembly({ geometry: base, color: \"#f4f4f2\" });\n}\n",
+              "compiledCode": "\"use strict\";\n/** Built-in window seat base, wall to wall in the alcove. Front face at frontY. mm, scan coordinates. */\nfunction run(xLeft = -1143, xRight = 1042, frontY = -545, backY = 155, baseHeight = 265) {\n    const base = replicad.makeBox([xLeft, frontY, 0], [xRight, backY, baseHeight]);\n    return new Assembly({ geometry: base, color: \"#f4f4f2\" });\n}\n"
+            }
+          ],
+          "allConnectors": [
+            {
+              "ap2Name": "number or geometry",
+              "ap1ID": "id-2310",
+              "ap2ID": "id-2309"
+            }
+          ],
+          "fileTypeVersion": 1
+        },
+        {
+          "atomType": "Molecule",
+          "x": 0.3,
+          "y": 0.8,
+          "uniqueID": "id-2311",
+          "name": "Seat Top",
+          "topLevel": false,
+          "allAtoms": [
+            {
+              "atomType": "Output",
+              "x": 1,
+              "y": 0.5,
+              "uniqueID": "id-2312",
+              "ioValues": [
+                {
+                  "name": "number or geometry",
+                  "ioValue": "__GEOMETRY_INPUT__"
+                }
+              ]
+            },
+            {
+              "atomType": "Code",
+              "x": 0.2,
+              "y": 0.2,
+              "uniqueID": "id-2313",
+              "ioValues": [
+                {
+                  "name": "xLeft",
+                  "ioValue": -1143
+                },
+                {
+                  "name": "xRight",
+                  "ioValue": 1042
+                },
+                {
+                  "name": "frontY",
+                  "ioValue": -560
+                },
+                {
+                  "name": "backY",
+                  "ioValue": 155
+                },
+                {
+                  "name": "seatHeight",
+                  "ioValue": 290
+                },
+                {
+                  "name": "boardThick",
+                  "ioValue": 25
+                }
+              ],
+              "interpreterVersion": 1,
+              "code": "/** Window seat top board; sits on the base and overhangs its front. Top at seatHeight (scan ~290). mm, scan coordinates. */\nfunction run(\n  xLeft: number = -1143,\n  xRight: number = 1042,\n  frontY: number = -560,\n  backY: number = 155,\n  seatHeight: number = 290,\n  boardThick: number = 25,\n): Assembly {\n  const top = replicad.makeBox([xLeft, frontY, seatHeight - boardThick], [xRight, backY, seatHeight]);\n  return new Assembly({ geometry: top, color: \"#fbfbfa\" });\n}\n",
+              "compiledCode": "\"use strict\";\n/** Window seat top board; sits on the base and overhangs its front. Top at seatHeight (scan ~290). mm, scan coordinates. */\nfunction run(xLeft = -1143, xRight = 1042, frontY = -560, backY = 155, seatHeight = 290, boardThick = 25) {\n    const top = replicad.makeBox([xLeft, frontY, seatHeight - boardThick], [xRight, backY, seatHeight]);\n    return new Assembly({ geometry: top, color: \"#fbfbfa\" });\n}\n"
+            }
+          ],
+          "allConnectors": [
+            {
+              "ap2Name": "number or geometry",
+              "ap1ID": "id-2313",
+              "ap2ID": "id-2312"
+            }
+          ],
+          "fileTypeVersion": 1
+        },
+        {
+          "atomType": "Molecule",
+          "x": 0.6,
+          "y": 0.5,
+          "uniqueID": "id-2314",
+          "name": "Alcove Window",
+          "topLevel": false,
+          "allAtoms": [
+            {
+              "atomType": "Output",
+              "x": 1,
+              "y": 0.5,
+              "uniqueID": "id-2315",
+              "ioValues": [
+                {
+                  "name": "number or geometry",
+                  "ioValue": "__GEOMETRY_INPUT__"
+                }
+              ]
+            },
+            {
+              "atomType": "Code",
+              "x": 0.2,
+              "y": 0.2,
+              "uniqueID": "id-2316",
+              "ioValues": [
+                {
+                  "name": "winL",
+                  "ioValue": -948
+                },
+                {
+                  "name": "winR",
+                  "ioValue": 843
+                },
+                {
+                  "name": "winSill",
+                  "ioValue": 450
+                },
+                {
+                  "name": "winHead",
+                  "ioValue": 2180
+                },
+                {
+                  "name": "outerY",
+                  "ioValue": 320
+                },
+                {
+                  "name": "frameDepth",
+                  "ioValue": 60
+                },
+                {
+                  "name": "frameWidth",
+                  "ioValue": 45
+                }
+              ],
+              "interpreterVersion": 1,
+              "code": "/** Alcove Window frame: white sash frame filling the rough opening, set at the outside face of the wall (outerY). mm, scan coordinates. */\nfunction run(\n  winL: number = -980,\n  winR: number = 880,\n  winSill: number = 450,\n  winHead: number = 1990,\n  outerY: number = 320,\n  frameDepth: number = 60,\n  frameWidth: number = 45,\n): Assembly {\n  const box = (a: number[], b: number[]) => replicad.makeBox(a, b);\n  const y0 = outerY - frameDepth;\n  const outer = box([winL, y0, winSill], [winR, outerY, winHead]);\n  const inner = box([winL + frameWidth, y0 - 1, winSill + frameWidth], [winR - frameWidth, outerY + 1, winHead - frameWidth]);\n  return new Assembly({ geometry: outer.cut(inner), color: \"#f7f7f5\" });\n}\n",
+              "compiledCode": "\"use strict\";\n/** Alcove Window frame: white sash frame filling the rough opening, set at the outside face of the wall (outerY). mm, scan coordinates. */\nfunction run(winL = -980, winR = 880, winSill = 450, winHead = 1990, outerY = 320, frameDepth = 60, frameWidth = 45) {\n    const box = (a, b) => replicad.makeBox(a, b);\n    const y0 = outerY - frameDepth;\n    const outer = box([winL, y0, winSill], [winR, outerY, winHead]);\n    const inner = box([winL + frameWidth, y0 - 1, winSill + frameWidth], [winR - frameWidth, outerY + 1, winHead - frameWidth]);\n    return new Assembly({ geometry: outer.cut(inner), color: \"#f7f7f5\" });\n}\n"
+            },
+            {
+              "atomType": "Code",
+              "x": 0.3,
+              "y": 0.3,
+              "uniqueID": "id-2317",
+              "ioValues": [
+                {
+                  "name": "winL",
+                  "ioValue": -948
+                },
+                {
+                  "name": "winR",
+                  "ioValue": 843
+                },
+                {
+                  "name": "winSill",
+                  "ioValue": 450
+                },
+                {
+                  "name": "winHead",
+                  "ioValue": 2180
+                },
+                {
+                  "name": "outerY",
+                  "ioValue": 320
+                },
+                {
+                  "name": "frameDepth",
+                  "ioValue": 60
+                },
+                {
+                  "name": "frameWidth",
+                  "ioValue": 45
+                },
+                {
+                  "name": "glassThick",
+                  "ioValue": 6
+                }
+              ],
+              "interpreterVersion": 1,
+              "code": "/** Alcove Window glass pane, centred in the frame depth. mm, scan coordinates. */\nfunction run(\n  winL: number = -980,\n  winR: number = 880,\n  winSill: number = 450,\n  winHead: number = 1990,\n  outerY: number = 320,\n  frameDepth: number = 60,\n  frameWidth: number = 45,\n  glassThick: number = 6,\n): Assembly {\n  const midY = outerY - frameDepth / 2;\n  const pane = replicad.makeBox(\n    [winL + frameWidth, midY - glassThick / 2, winSill + frameWidth],\n    [winR - frameWidth, midY + glassThick / 2, winHead - frameWidth],\n  );\n  return new Assembly({ geometry: pane, color: \"#cfe6ee\" });\n}\n",
+              "compiledCode": "\"use strict\";\n/** Alcove Window glass pane, centred in the frame depth. mm, scan coordinates. */\nfunction run(winL = -980, winR = 880, winSill = 450, winHead = 1990, outerY = 320, frameDepth = 60, frameWidth = 45, glassThick = 6) {\n    const midY = outerY - frameDepth / 2;\n    const pane = replicad.makeBox([winL + frameWidth, midY - glassThick / 2, winSill + frameWidth], [winR - frameWidth, midY + glassThick / 2, winHead - frameWidth]);\n    return new Assembly({ geometry: pane, color: \"#cfe6ee\" });\n}\n"
+            },
+            {
+              "atomType": "Code",
+              "x": 0.3,
+              "y": 0.4,
+              "uniqueID": "id-2318",
+              "ioValues": [
+                {
+                  "name": "winL",
+                  "ioValue": -948
+                },
+                {
+                  "name": "winR",
+                  "ioValue": 843
+                },
+                {
+                  "name": "winSill",
+                  "ioValue": 450
+                },
+                {
+                  "name": "winHead",
+                  "ioValue": 2180
+                },
+                {
+                  "name": "outerY",
+                  "ioValue": 320
+                },
+                {
+                  "name": "frameDepth",
+                  "ioValue": 60
+                },
+                {
+                  "name": "frameWidth",
+                  "ioValue": 45
+                },
+                {
+                  "name": "glassThick",
+                  "ioValue": 6
+                },
+                {
+                  "name": "barCount",
+                  "ioValue": 3
+                },
+                {
+                  "name": "barWidth",
+                  "ioValue": 30
+                },
+                {
+                  "name": "barDepth",
+                  "ioValue": 10
+                }
+              ],
+              "interpreterVersion": 1,
+              "code": "/** Alcove Window black vertical grille bars, evenly spaced on the room side of the glass. mm, scan coordinates. */\nfunction run(\n  winL: number = -980,\n  winR: number = 880,\n  winSill: number = 450,\n  winHead: number = 1990,\n  outerY: number = 320,\n  frameDepth: number = 60,\n  frameWidth: number = 45,\n  glassThick: number = 6,\n  barCount: number = 3,\n  barWidth: number = 30,\n  barDepth: number = 10,\n): Assembly {\n  const midY = outerY - frameDepth / 2;\n  const yGlass = midY - glassThick / 2; // room-side face of the glass\n  const x0 = winL + frameWidth;\n  const span = winR - frameWidth - x0;\n  let bars = null;\n  for (let i = 1; i <= barCount; i++) {\n    const cx = x0 + (span * i) / (barCount + 1);\n    const bar = replicad.makeBox(\n      [cx - barWidth / 2, yGlass - barDepth, winSill + frameWidth],\n      [cx + barWidth / 2, yGlass, winHead - frameWidth],\n    );\n    bars = bars ? bars.fuse(bar) : bar;\n  }\n  return new Assembly({ geometry: bars, color: \"#262626\" });\n}\n",
+              "compiledCode": "\"use strict\";\n/** Alcove Window black vertical grille bars, evenly spaced on the room side of the glass. mm, scan coordinates. */\nfunction run(winL = -980, winR = 880, winSill = 450, winHead = 1990, outerY = 320, frameDepth = 60, frameWidth = 45, glassThick = 6, barCount = 3, barWidth = 30, barDepth = 10) {\n    const midY = outerY - frameDepth / 2;\n    const yGlass = midY - glassThick / 2; // room-side face of the glass\n    const x0 = winL + frameWidth;\n    const span = winR - frameWidth - x0;\n    let bars = null;\n    for (let i = 1; i <= barCount; i++) {\n        const cx = x0 + (span * i) / (barCount + 1);\n        const bar = replicad.makeBox([cx - barWidth / 2, yGlass - barDepth, winSill + frameWidth], [cx + barWidth / 2, yGlass, winHead - frameWidth]);\n        bars = bars ? bars.fuse(bar) : bar;\n    }\n    return new Assembly({ geometry: bars, color: \"#262626\" });\n}\n"
+            },
+            {
+              "atomType": "Assembly",
+              "x": 0.4,
+              "y": 0.6,
+              "uniqueID": "id-2319",
+              "ioValues": [
+                {
+                  "name": "makeDisjoint",
+                  "ioValue": false
+                },
+                {
+                  "name": "Shape 1",
+                  "ioValue": "__GEOMETRY_INPUT__"
+                },
+                {
+                  "name": "Shape2",
+                  "ioValue": "__GEOMETRY_INPUT__"
+                },
+                {
+                  "name": "Shape3",
+                  "ioValue": "__GEOMETRY_INPUT__"
+                },
+                {
+                  "name": "Shape4",
+                  "ioValue": "__GEOMETRY_INPUT__"
+                }
+              ]
+            }
+          ],
+          "allConnectors": [
+            {
+              "ap2Name": "Shape 1",
+              "ap1ID": "id-2316",
+              "ap2ID": "id-2319"
+            },
+            {
+              "ap2Name": "Shape2",
+              "ap1ID": "id-2317",
+              "ap2ID": "id-2319"
+            },
+            {
+              "ap2Name": "Shape3",
+              "ap1ID": "id-2318",
+              "ap2ID": "id-2319"
+            },
+            {
+              "ap2Name": "number or geometry",
+              "ap1ID": "id-2319",
+              "ap2ID": "id-2315"
+            }
+          ],
+          "fileTypeVersion": 1
+        },
+        {
+          "atomType": "Molecule",
+          "x": 0.6,
+          "y": 0.3,
+          "uniqueID": "id-2320",
+          "name": "Left Window",
+          "topLevel": false,
+          "allAtoms": [
+            {
+              "atomType": "Output",
+              "x": 1,
+              "y": 0.5,
+              "uniqueID": "id-2321",
+              "ioValues": [
+                {
+                  "name": "number or geometry",
+                  "ioValue": "__GEOMETRY_INPUT__"
+                }
+              ]
+            },
+            {
+              "atomType": "Code",
+              "x": 0.2,
+              "y": 0.2,
+              "uniqueID": "id-2322",
+              "ioValues": [
+                {
+                  "name": "winL",
+                  "ioValue": -2161
+                },
+                {
+                  "name": "winR",
+                  "ioValue": -1281
+                },
+                {
+                  "name": "winSill",
+                  "ioValue": 510
+                },
+                {
+                  "name": "winHead",
+                  "ioValue": 2160
+                },
+                {
+                  "name": "outerY",
+                  "ioValue": -455
+                },
+                {
+                  "name": "frameDepth",
+                  "ioValue": 60
+                },
+                {
+                  "name": "frameWidth",
+                  "ioValue": 45
+                }
+              ],
+              "interpreterVersion": 1,
+              "code": "/** Left Window frame: white sash frame filling the rough opening, set at the outside face of the wall (outerY). mm, scan coordinates. */\nfunction run(\n  winL: number = -1810,\n  winR: number = -1230,\n  winSill: number = 510,\n  winHead: number = 2165,\n  outerY: number = -455,\n  frameDepth: number = 60,\n  frameWidth: number = 45,\n): Assembly {\n  const box = (a: number[], b: number[]) => replicad.makeBox(a, b);\n  const y0 = outerY - frameDepth;\n  const outer = box([winL, y0, winSill], [winR, outerY, winHead]);\n  const inner = box([winL + frameWidth, y0 - 1, winSill + frameWidth], [winR - frameWidth, outerY + 1, winHead - frameWidth]);\n  return new Assembly({ geometry: outer.cut(inner), color: \"#f7f7f5\" });\n}\n",
+              "compiledCode": "\"use strict\";\n/** Left Window frame: white sash frame filling the rough opening, set at the outside face of the wall (outerY). mm, scan coordinates. */\nfunction run(winL = -1810, winR = -1230, winSill = 510, winHead = 2165, outerY = -455, frameDepth = 60, frameWidth = 45) {\n    const box = (a, b) => replicad.makeBox(a, b);\n    const y0 = outerY - frameDepth;\n    const outer = box([winL, y0, winSill], [winR, outerY, winHead]);\n    const inner = box([winL + frameWidth, y0 - 1, winSill + frameWidth], [winR - frameWidth, outerY + 1, winHead - frameWidth]);\n    return new Assembly({ geometry: outer.cut(inner), color: \"#f7f7f5\" });\n}\n"
+            },
+            {
+              "atomType": "Code",
+              "x": 0.3,
+              "y": 0.3,
+              "uniqueID": "id-2323",
+              "ioValues": [
+                {
+                  "name": "winL",
+                  "ioValue": -2161
+                },
+                {
+                  "name": "winR",
+                  "ioValue": -1281
+                },
+                {
+                  "name": "winSill",
+                  "ioValue": 510
+                },
+                {
+                  "name": "winHead",
+                  "ioValue": 2160
+                },
+                {
+                  "name": "outerY",
+                  "ioValue": -455
+                },
+                {
+                  "name": "frameDepth",
+                  "ioValue": 60
+                },
+                {
+                  "name": "frameWidth",
+                  "ioValue": 45
+                },
+                {
+                  "name": "glassThick",
+                  "ioValue": 6
+                }
+              ],
+              "interpreterVersion": 1,
+              "code": "/** Left Window glass pane, centred in the frame depth. mm, scan coordinates. */\nfunction run(\n  winL: number = -1810,\n  winR: number = -1230,\n  winSill: number = 510,\n  winHead: number = 2165,\n  outerY: number = -455,\n  frameDepth: number = 60,\n  frameWidth: number = 45,\n  glassThick: number = 6,\n): Assembly {\n  const midY = outerY - frameDepth / 2;\n  const pane = replicad.makeBox(\n    [winL + frameWidth, midY - glassThick / 2, winSill + frameWidth],\n    [winR - frameWidth, midY + glassThick / 2, winHead - frameWidth],\n  );\n  return new Assembly({ geometry: pane, color: \"#cfe6ee\" });\n}\n",
+              "compiledCode": "\"use strict\";\n/** Left Window glass pane, centred in the frame depth. mm, scan coordinates. */\nfunction run(winL = -1810, winR = -1230, winSill = 510, winHead = 2165, outerY = -455, frameDepth = 60, frameWidth = 45, glassThick = 6) {\n    const midY = outerY - frameDepth / 2;\n    const pane = replicad.makeBox([winL + frameWidth, midY - glassThick / 2, winSill + frameWidth], [winR - frameWidth, midY + glassThick / 2, winHead - frameWidth]);\n    return new Assembly({ geometry: pane, color: \"#cfe6ee\" });\n}\n"
+            },
+            {
+              "atomType": "Code",
+              "x": 0.3,
+              "y": 0.4,
+              "uniqueID": "id-2324",
+              "ioValues": [
+                {
+                  "name": "winL",
+                  "ioValue": -2161
+                },
+                {
+                  "name": "winR",
+                  "ioValue": -1281
+                },
+                {
+                  "name": "winSill",
+                  "ioValue": 510
+                },
+                {
+                  "name": "winHead",
+                  "ioValue": 2160
+                },
+                {
+                  "name": "outerY",
+                  "ioValue": -455
+                },
+                {
+                  "name": "frameDepth",
+                  "ioValue": 60
+                },
+                {
+                  "name": "frameWidth",
+                  "ioValue": 45
+                },
+                {
+                  "name": "glassThick",
+                  "ioValue": 6
+                },
+                {
+                  "name": "barCount",
+                  "ioValue": 1
+                },
+                {
+                  "name": "barWidth",
+                  "ioValue": 30
+                },
+                {
+                  "name": "barDepth",
+                  "ioValue": 10
+                }
+              ],
+              "interpreterVersion": 1,
+              "code": "/** Left Window black vertical grille bars, evenly spaced on the room side of the glass. mm, scan coordinates. */\nfunction run(\n  winL: number = -1810,\n  winR: number = -1230,\n  winSill: number = 510,\n  winHead: number = 2165,\n  outerY: number = -455,\n  frameDepth: number = 60,\n  frameWidth: number = 45,\n  glassThick: number = 6,\n  barCount: number = 1,\n  barWidth: number = 30,\n  barDepth: number = 10,\n): Assembly {\n  const midY = outerY - frameDepth / 2;\n  const yGlass = midY - glassThick / 2; // room-side face of the glass\n  const x0 = winL + frameWidth;\n  const span = winR - frameWidth - x0;\n  let bars = null;\n  for (let i = 1; i <= barCount; i++) {\n    const cx = x0 + (span * i) / (barCount + 1);\n    const bar = replicad.makeBox(\n      [cx - barWidth / 2, yGlass - barDepth, winSill + frameWidth],\n      [cx + barWidth / 2, yGlass, winHead - frameWidth],\n    );\n    bars = bars ? bars.fuse(bar) : bar;\n  }\n  return new Assembly({ geometry: bars, color: \"#262626\" });\n}\n",
+              "compiledCode": "\"use strict\";\n/** Left Window black vertical grille bars, evenly spaced on the room side of the glass. mm, scan coordinates. */\nfunction run(winL = -1810, winR = -1230, winSill = 510, winHead = 2165, outerY = -455, frameDepth = 60, frameWidth = 45, glassThick = 6, barCount = 1, barWidth = 30, barDepth = 10) {\n    const midY = outerY - frameDepth / 2;\n    const yGlass = midY - glassThick / 2; // room-side face of the glass\n    const x0 = winL + frameWidth;\n    const span = winR - frameWidth - x0;\n    let bars = null;\n    for (let i = 1; i <= barCount; i++) {\n        const cx = x0 + (span * i) / (barCount + 1);\n        const bar = replicad.makeBox([cx - barWidth / 2, yGlass - barDepth, winSill + frameWidth], [cx + barWidth / 2, yGlass, winHead - frameWidth]);\n        bars = bars ? bars.fuse(bar) : bar;\n    }\n    return new Assembly({ geometry: bars, color: \"#262626\" });\n}\n"
+            },
+            {
+              "atomType": "Assembly",
+              "x": 0.4,
+              "y": 0.6,
+              "uniqueID": "id-2325",
+              "ioValues": [
+                {
+                  "name": "makeDisjoint",
+                  "ioValue": false
+                },
+                {
+                  "name": "Shape 1",
+                  "ioValue": "__GEOMETRY_INPUT__"
+                },
+                {
+                  "name": "Shape2",
+                  "ioValue": "__GEOMETRY_INPUT__"
+                },
+                {
+                  "name": "Shape3",
+                  "ioValue": "__GEOMETRY_INPUT__"
+                },
+                {
+                  "name": "Shape4",
+                  "ioValue": "__GEOMETRY_INPUT__"
+                }
+              ]
+            }
+          ],
+          "allConnectors": [
+            {
+              "ap2Name": "Shape 1",
+              "ap1ID": "id-2322",
+              "ap2ID": "id-2325"
+            },
+            {
+              "ap2Name": "Shape2",
+              "ap1ID": "id-2323",
+              "ap2ID": "id-2325"
+            },
+            {
+              "ap2Name": "Shape3",
+              "ap1ID": "id-2324",
+              "ap2ID": "id-2325"
+            },
+            {
+              "ap2Name": "number or geometry",
+              "ap1ID": "id-2325",
+              "ap2ID": "id-2321"
+            }
+          ],
+          "fileTypeVersion": 1
+        },
+        {
+          "atomType": "Molecule",
+          "x": 0.6,
+          "y": 0.4,
+          "uniqueID": "id-2326",
+          "name": "Right Window",
+          "topLevel": false,
+          "allAtoms": [
+            {
+              "atomType": "Output",
+              "x": 1,
+              "y": 0.5,
+              "uniqueID": "id-2327",
+              "ioValues": [
+                {
+                  "name": "number or geometry",
+                  "ioValue": "__GEOMETRY_INPUT__"
+                }
+              ]
+            },
+            {
+              "atomType": "Code",
+              "x": 0.2,
+              "y": 0.2,
+              "uniqueID": "id-2328",
+              "ioValues": [
+                {
+                  "name": "winL",
+                  "ioValue": 1210
+                },
+                {
+                  "name": "winR",
+                  "ioValue": 2090
+                },
+                {
+                  "name": "winSill",
+                  "ioValue": 510
+                },
+                {
+                  "name": "winHead",
+                  "ioValue": 2160
+                },
+                {
+                  "name": "outerY",
+                  "ioValue": -455
+                },
+                {
+                  "name": "frameDepth",
+                  "ioValue": 60
+                },
+                {
+                  "name": "frameWidth",
+                  "ioValue": 45
+                }
+              ],
+              "interpreterVersion": 1,
+              "code": "/** Right Window frame: white sash frame filling the rough opening, set at the outside face of the wall (outerY). mm, scan coordinates. */\nfunction run(\n  winL: number = 1265,\n  winR: number = 2141,\n  winSill: number = 510,\n  winHead: number = 2150,\n  outerY: number = -455,\n  frameDepth: number = 60,\n  frameWidth: number = 45,\n): Assembly {\n  const box = (a: number[], b: number[]) => replicad.makeBox(a, b);\n  const y0 = outerY - frameDepth;\n  const outer = box([winL, y0, winSill], [winR, outerY, winHead]);\n  const inner = box([winL + frameWidth, y0 - 1, winSill + frameWidth], [winR - frameWidth, outerY + 1, winHead - frameWidth]);\n  return new Assembly({ geometry: outer.cut(inner), color: \"#f7f7f5\" });\n}\n",
+              "compiledCode": "\"use strict\";\n/** Right Window frame: white sash frame filling the rough opening, set at the outside face of the wall (outerY). mm, scan coordinates. */\nfunction run(winL = 1265, winR = 2141, winSill = 510, winHead = 2150, outerY = -455, frameDepth = 60, frameWidth = 45) {\n    const box = (a, b) => replicad.makeBox(a, b);\n    const y0 = outerY - frameDepth;\n    const outer = box([winL, y0, winSill], [winR, outerY, winHead]);\n    const inner = box([winL + frameWidth, y0 - 1, winSill + frameWidth], [winR - frameWidth, outerY + 1, winHead - frameWidth]);\n    return new Assembly({ geometry: outer.cut(inner), color: \"#f7f7f5\" });\n}\n"
+            },
+            {
+              "atomType": "Code",
+              "x": 0.3,
+              "y": 0.3,
+              "uniqueID": "id-2329",
+              "ioValues": [
+                {
+                  "name": "winL",
+                  "ioValue": 1210
+                },
+                {
+                  "name": "winR",
+                  "ioValue": 2090
+                },
+                {
+                  "name": "winSill",
+                  "ioValue": 510
+                },
+                {
+                  "name": "winHead",
+                  "ioValue": 2160
+                },
+                {
+                  "name": "outerY",
+                  "ioValue": -455
+                },
+                {
+                  "name": "frameDepth",
+                  "ioValue": 60
+                },
+                {
+                  "name": "frameWidth",
+                  "ioValue": 45
+                },
+                {
+                  "name": "glassThick",
+                  "ioValue": 6
+                }
+              ],
+              "interpreterVersion": 1,
+              "code": "/** Right Window glass pane, centred in the frame depth. mm, scan coordinates. */\nfunction run(\n  winL: number = 1265,\n  winR: number = 2141,\n  winSill: number = 510,\n  winHead: number = 2150,\n  outerY: number = -455,\n  frameDepth: number = 60,\n  frameWidth: number = 45,\n  glassThick: number = 6,\n): Assembly {\n  const midY = outerY - frameDepth / 2;\n  const pane = replicad.makeBox(\n    [winL + frameWidth, midY - glassThick / 2, winSill + frameWidth],\n    [winR - frameWidth, midY + glassThick / 2, winHead - frameWidth],\n  );\n  return new Assembly({ geometry: pane, color: \"#cfe6ee\" });\n}\n",
+              "compiledCode": "\"use strict\";\n/** Right Window glass pane, centred in the frame depth. mm, scan coordinates. */\nfunction run(winL = 1265, winR = 2141, winSill = 510, winHead = 2150, outerY = -455, frameDepth = 60, frameWidth = 45, glassThick = 6) {\n    const midY = outerY - frameDepth / 2;\n    const pane = replicad.makeBox([winL + frameWidth, midY - glassThick / 2, winSill + frameWidth], [winR - frameWidth, midY + glassThick / 2, winHead - frameWidth]);\n    return new Assembly({ geometry: pane, color: \"#cfe6ee\" });\n}\n"
+            },
+            {
+              "atomType": "Code",
+              "x": 0.3,
+              "y": 0.4,
+              "uniqueID": "id-2330",
+              "ioValues": [
+                {
+                  "name": "winL",
+                  "ioValue": 1210
+                },
+                {
+                  "name": "winR",
+                  "ioValue": 2090
+                },
+                {
+                  "name": "winSill",
+                  "ioValue": 510
+                },
+                {
+                  "name": "winHead",
+                  "ioValue": 2160
+                },
+                {
+                  "name": "outerY",
+                  "ioValue": -455
+                },
+                {
+                  "name": "frameDepth",
+                  "ioValue": 60
+                },
+                {
+                  "name": "frameWidth",
+                  "ioValue": 45
+                },
+                {
+                  "name": "glassThick",
+                  "ioValue": 6
+                },
+                {
+                  "name": "barCount",
+                  "ioValue": 1
+                },
+                {
+                  "name": "barWidth",
+                  "ioValue": 30
+                },
+                {
+                  "name": "barDepth",
+                  "ioValue": 10
+                }
+              ],
+              "interpreterVersion": 1,
+              "code": "/** Right Window black vertical grille bars, evenly spaced on the room side of the glass. mm, scan coordinates. */\nfunction run(\n  winL: number = 1265,\n  winR: number = 2141,\n  winSill: number = 510,\n  winHead: number = 2150,\n  outerY: number = -455,\n  frameDepth: number = 60,\n  frameWidth: number = 45,\n  glassThick: number = 6,\n  barCount: number = 1,\n  barWidth: number = 30,\n  barDepth: number = 10,\n): Assembly {\n  const midY = outerY - frameDepth / 2;\n  const yGlass = midY - glassThick / 2; // room-side face of the glass\n  const x0 = winL + frameWidth;\n  const span = winR - frameWidth - x0;\n  let bars = null;\n  for (let i = 1; i <= barCount; i++) {\n    const cx = x0 + (span * i) / (barCount + 1);\n    const bar = replicad.makeBox(\n      [cx - barWidth / 2, yGlass - barDepth, winSill + frameWidth],\n      [cx + barWidth / 2, yGlass, winHead - frameWidth],\n    );\n    bars = bars ? bars.fuse(bar) : bar;\n  }\n  return new Assembly({ geometry: bars, color: \"#262626\" });\n}\n",
+              "compiledCode": "\"use strict\";\n/** Right Window black vertical grille bars, evenly spaced on the room side of the glass. mm, scan coordinates. */\nfunction run(winL = 1265, winR = 2141, winSill = 510, winHead = 2150, outerY = -455, frameDepth = 60, frameWidth = 45, glassThick = 6, barCount = 1, barWidth = 30, barDepth = 10) {\n    const midY = outerY - frameDepth / 2;\n    const yGlass = midY - glassThick / 2; // room-side face of the glass\n    const x0 = winL + frameWidth;\n    const span = winR - frameWidth - x0;\n    let bars = null;\n    for (let i = 1; i <= barCount; i++) {\n        const cx = x0 + (span * i) / (barCount + 1);\n        const bar = replicad.makeBox([cx - barWidth / 2, yGlass - barDepth, winSill + frameWidth], [cx + barWidth / 2, yGlass, winHead - frameWidth]);\n        bars = bars ? bars.fuse(bar) : bar;\n    }\n    return new Assembly({ geometry: bars, color: \"#262626\" });\n}\n"
+            },
+            {
+              "atomType": "Assembly",
+              "x": 0.4,
+              "y": 0.6,
+              "uniqueID": "id-2331",
+              "ioValues": [
+                {
+                  "name": "makeDisjoint",
+                  "ioValue": false
+                },
+                {
+                  "name": "Shape 1",
+                  "ioValue": "__GEOMETRY_INPUT__"
+                },
+                {
+                  "name": "Shape2",
+                  "ioValue": "__GEOMETRY_INPUT__"
+                },
+                {
+                  "name": "Shape3",
+                  "ioValue": "__GEOMETRY_INPUT__"
+                },
+                {
+                  "name": "Shape4",
+                  "ioValue": "__GEOMETRY_INPUT__"
+                }
+              ]
+            }
+          ],
+          "allConnectors": [
+            {
+              "ap2Name": "Shape 1",
+              "ap1ID": "id-2328",
+              "ap2ID": "id-2331"
+            },
+            {
+              "ap2Name": "Shape2",
+              "ap1ID": "id-2329",
+              "ap2ID": "id-2331"
+            },
+            {
+              "ap2Name": "Shape3",
+              "ap1ID": "id-2330",
+              "ap2ID": "id-2331"
+            },
+            {
+              "ap2Name": "number or geometry",
+              "ap1ID": "id-2331",
+              "ap2ID": "id-2327"
+            }
+          ],
+          "fileTypeVersion": 1
+        },
+        {
+          "atomType": "Molecule",
+          "x": 0.6,
+          "y": 0.8,
+          "uniqueID": "id-2332",
+          "name": "Alcove Window Casing",
+          "topLevel": false,
+          "allAtoms": [
+            {
+              "atomType": "Output",
+              "x": 1,
+              "y": 0.5,
+              "uniqueID": "id-2333",
+              "ioValues": [
+                {
+                  "name": "number or geometry",
+                  "ioValue": "__GEOMETRY_INPUT__"
+                }
+              ]
+            },
+            {
+              "atomType": "Code",
+              "x": 0.2,
+              "y": 0.2,
+              "uniqueID": "id-2334",
+              "ioValues": [
+                {
+                  "name": "openL",
+                  "ioValue": -948
+                },
+                {
+                  "name": "openR",
+                  "ioValue": 843
+                },
+                {
+                  "name": "openBottom",
+                  "ioValue": 450
+                },
+                {
+                  "name": "openTop",
+                  "ioValue": 2180
+                },
+                {
+                  "name": "faceY",
+                  "ioValue": 155
+                },
+                {
+                  "name": "trimWidth",
+                  "ioValue": 60
+                },
+                {
+                  "name": "trimThick",
+                  "ioValue": 20
+                },
+                {
+                  "name": "legsToFloor",
+                  "ioValue": false
+                }
+              ],
+              "interpreterVersion": 1,
+              "code": "/** Alcove Window Casing: flat painted trim around the opening, proud of the wall face at faceY (picture frame on all four sides). mm, scan coordinates. */\nfunction run(\n  openL: number = -980,\n  openR: number = 880,\n  openBottom: number = 450,\n  openTop: number = 1990,\n  faceY: number = 155,\n  trimWidth: number = 60,\n  trimThick: number = 20,\n  legsToFloor: boolean = false,\n): Assembly {\n  const box = (a: number[], b: number[]) => replicad.makeBox(a, b);\n  const bottom = legsToFloor ? 0 : openBottom - trimWidth;\n  const outer = box([openL - trimWidth, faceY - trimThick, bottom], [openR + trimWidth, faceY, openTop + trimWidth]);\n  const inner = box([openL, faceY - trimThick - 1, legsToFloor ? -1 : openBottom], [openR, faceY + 1, openTop]);\n  return new Assembly({ geometry: outer.cut(inner), color: \"#ffffff\" });\n}\n",
+              "compiledCode": "\"use strict\";\n/** Alcove Window Casing: flat painted trim around the opening, proud of the wall face at faceY (picture frame on all four sides). mm, scan coordinates. */\nfunction run(openL = -980, openR = 880, openBottom = 450, openTop = 1990, faceY = 155, trimWidth = 60, trimThick = 20, legsToFloor = false) {\n    const box = (a, b) => replicad.makeBox(a, b);\n    const bottom = legsToFloor ? 0 : openBottom - trimWidth;\n    const outer = box([openL - trimWidth, faceY - trimThick, bottom], [openR + trimWidth, faceY, openTop + trimWidth]);\n    const inner = box([openL, faceY - trimThick - 1, legsToFloor ? -1 : openBottom], [openR, faceY + 1, openTop]);\n    return new Assembly({ geometry: outer.cut(inner), color: \"#ffffff\" });\n}\n"
+            }
+          ],
+          "allConnectors": [
+            {
+              "ap2Name": "number or geometry",
+              "ap1ID": "id-2334",
+              "ap2ID": "id-2333"
+            }
+          ],
+          "fileTypeVersion": 1
+        },
+        {
+          "atomType": "Molecule",
+          "x": 0.6,
+          "y": 0.6,
+          "uniqueID": "id-2335",
+          "name": "Left Window Casing",
+          "topLevel": false,
+          "allAtoms": [
+            {
+              "atomType": "Output",
+              "x": 1,
+              "y": 0.5,
+              "uniqueID": "id-2336",
+              "ioValues": [
+                {
+                  "name": "number or geometry",
+                  "ioValue": "__GEOMETRY_INPUT__"
+                }
+              ]
+            },
+            {
+              "atomType": "Code",
+              "x": 0.2,
+              "y": 0.2,
+              "uniqueID": "id-2337",
+              "ioValues": [
+                {
+                  "name": "openL",
+                  "ioValue": -2161
+                },
+                {
+                  "name": "openR",
+                  "ioValue": -1281
+                },
+                {
+                  "name": "openBottom",
+                  "ioValue": 510
+                },
+                {
+                  "name": "openTop",
+                  "ioValue": 2160
+                },
+                {
+                  "name": "faceY",
+                  "ioValue": -620
+                },
+                {
+                  "name": "trimWidth",
+                  "ioValue": 60
+                },
+                {
+                  "name": "trimThick",
+                  "ioValue": 20
+                },
+                {
+                  "name": "legsToFloor",
+                  "ioValue": true
+                }
+              ],
+              "interpreterVersion": 1,
+              "code": "/** Left Window Casing: flat painted trim around the opening, proud of the wall face at faceY; legs run to the floor as in the photos. mm, scan coordinates. */\nfunction run(\n  openL: number = -1810,\n  openR: number = -1230,\n  openBottom: number = 510,\n  openTop: number = 2165,\n  faceY: number = -620,\n  trimWidth: number = 60,\n  trimThick: number = 20,\n  legsToFloor: boolean = true,\n): Assembly {\n  const box = (a: number[], b: number[]) => replicad.makeBox(a, b);\n  const bottom = legsToFloor ? 0 : openBottom - trimWidth;\n  const outer = box([openL - trimWidth, faceY - trimThick, bottom], [openR + trimWidth, faceY, openTop + trimWidth]);\n  const inner = box([openL, faceY - trimThick - 1, legsToFloor ? -1 : openBottom], [openR, faceY + 1, openTop]);\n  return new Assembly({ geometry: outer.cut(inner), color: \"#ffffff\" });\n}\n",
+              "compiledCode": "\"use strict\";\n/** Left Window Casing: flat painted trim around the opening, proud of the wall face at faceY; legs run to the floor as in the photos. mm, scan coordinates. */\nfunction run(openL = -1810, openR = -1230, openBottom = 510, openTop = 2165, faceY = -620, trimWidth = 60, trimThick = 20, legsToFloor = true) {\n    const box = (a, b) => replicad.makeBox(a, b);\n    const bottom = legsToFloor ? 0 : openBottom - trimWidth;\n    const outer = box([openL - trimWidth, faceY - trimThick, bottom], [openR + trimWidth, faceY, openTop + trimWidth]);\n    const inner = box([openL, faceY - trimThick - 1, legsToFloor ? -1 : openBottom], [openR, faceY + 1, openTop]);\n    return new Assembly({ geometry: outer.cut(inner), color: \"#ffffff\" });\n}\n"
+            }
+          ],
+          "allConnectors": [
+            {
+              "ap2Name": "number or geometry",
+              "ap1ID": "id-2337",
+              "ap2ID": "id-2336"
+            }
+          ],
+          "fileTypeVersion": 1
+        },
+        {
+          "atomType": "Molecule",
+          "x": 0.6,
+          "y": 0.7,
+          "uniqueID": "id-2338",
+          "name": "Right Window Casing",
+          "topLevel": false,
+          "allAtoms": [
+            {
+              "atomType": "Output",
+              "x": 1,
+              "y": 0.5,
+              "uniqueID": "id-2339",
+              "ioValues": [
+                {
+                  "name": "number or geometry",
+                  "ioValue": "__GEOMETRY_INPUT__"
+                }
+              ]
+            },
+            {
+              "atomType": "Code",
+              "x": 0.2,
+              "y": 0.2,
+              "uniqueID": "id-2340",
+              "ioValues": [
+                {
+                  "name": "openL",
+                  "ioValue": 1210
+                },
+                {
+                  "name": "openR",
+                  "ioValue": 2090
+                },
+                {
+                  "name": "openBottom",
+                  "ioValue": 510
+                },
+                {
+                  "name": "openTop",
+                  "ioValue": 2160
+                },
+                {
+                  "name": "faceY",
+                  "ioValue": -620
+                },
+                {
+                  "name": "trimWidth",
+                  "ioValue": 60
+                },
+                {
+                  "name": "trimThick",
+                  "ioValue": 20
+                },
+                {
+                  "name": "legsToFloor",
+                  "ioValue": true
+                }
+              ],
+              "interpreterVersion": 1,
+              "code": "/** Right Window Casing: flat painted trim around the opening, proud of the wall face at faceY; legs run to the floor as in the photos. mm, scan coordinates. */\nfunction run(\n  openL: number = 1265,\n  openR: number = 2141,\n  openBottom: number = 510,\n  openTop: number = 2150,\n  faceY: number = -620,\n  trimWidth: number = 60,\n  trimThick: number = 20,\n  legsToFloor: boolean = true,\n): Assembly {\n  const box = (a: number[], b: number[]) => replicad.makeBox(a, b);\n  const bottom = legsToFloor ? 0 : openBottom - trimWidth;\n  const outer = box([openL - trimWidth, faceY - trimThick, bottom], [openR + trimWidth, faceY, openTop + trimWidth]);\n  const inner = box([openL, faceY - trimThick - 1, legsToFloor ? -1 : openBottom], [openR, faceY + 1, openTop]);\n  return new Assembly({ geometry: outer.cut(inner), color: \"#ffffff\" });\n}\n",
+              "compiledCode": "\"use strict\";\n/** Right Window Casing: flat painted trim around the opening, proud of the wall face at faceY; legs run to the floor as in the photos. mm, scan coordinates. */\nfunction run(openL = 1265, openR = 2141, openBottom = 510, openTop = 2150, faceY = -620, trimWidth = 60, trimThick = 20, legsToFloor = true) {\n    const box = (a, b) => replicad.makeBox(a, b);\n    const bottom = legsToFloor ? 0 : openBottom - trimWidth;\n    const outer = box([openL - trimWidth, faceY - trimThick, bottom], [openR + trimWidth, faceY, openTop + trimWidth]);\n    const inner = box([openL, faceY - trimThick - 1, legsToFloor ? -1 : openBottom], [openR, faceY + 1, openTop]);\n    return new Assembly({ geometry: outer.cut(inner), color: \"#ffffff\" });\n}\n"
+            }
+          ],
+          "allConnectors": [
+            {
+              "ap2Name": "number or geometry",
+              "ap1ID": "id-2340",
+              "ap2ID": "id-2339"
+            }
+          ],
+          "fileTypeVersion": 1
+        },
+        {
+          "atomType": "Tag",
+          "x": 0.7,
+          "y": 0.5,
+          "uniqueID": "id-2341",
+          "name": "room",
+          "ioValues": [
+            {
+              "name": "geometry",
+              "ioValue": "__GEOMETRY_INPUT__"
+            }
+          ],
+          "tags": [
+            "room"
+          ]
+        },
+        {
+          "atomType": "Assembly",
+          "x": 0.8,
+          "y": 0.3,
+          "uniqueID": "id-2342",
           "ioValues": [
             {
               "name": "makeDisjoint",
@@ -768,769 +1772,169 @@
       ],
       "allConnectors": [
         {
-          "ap2Name": "Shape 1",
-          "ap1ID": "id-1357",
-          "ap2ID": "id-1410"
+          "ap2Name": "geometry",
+          "ap1ID": "id-2278",
+          "ap2ID": "id-2285"
+        },
+        {
+          "ap2Name": "geometry",
+          "ap1ID": "id-2279",
+          "ap2ID": "id-2287"
+        },
+        {
+          "ap2Name": "geometry",
+          "ap1ID": "id-2280",
+          "ap2ID": "id-2289"
+        },
+        {
+          "ap2Name": "geometry",
+          "ap1ID": "id-2281",
+          "ap2ID": "id-2284"
+        },
+        {
+          "ap2Name": "Shape4",
+          "ap1ID": "id-2282",
+          "ap2ID": "id-2283"
+        },
+        {
+          "ap2Name": "geometry",
+          "ap1ID": "id-2283",
+          "ap2ID": "id-2341"
         },
         {
           "ap2Name": "Shape2",
-          "ap1ID": "id-1373",
-          "ap2ID": "id-1410"
+          "ap1ID": "id-2284",
+          "ap2ID": "id-2342"
         },
         {
-          "ap2Name": "Shape3",
-          "ap1ID": "id-1390",
-          "ap2ID": "id-1410"
+          "ap2Name": "geometry",
+          "ap1ID": "id-2285",
+          "ap2ID": "id-2286"
         },
-        {
-          "ap2Name": "number or geometry",
-          "ap1ID": "id-1410",
-          "ap2ID": "id-1355"
-        }
-      ],
-      "fileTypeVersion": 1
-    },
-    {
-      "atomType": "Molecule",
-      "x": 0.6,
-      "y": 0.3,
-      "uniqueID": "id-1417",
-      "name": "Left Window",
-      "topLevel": false,
-      "allAtoms": [
-        {
-          "atomType": "Output",
-          "x": 1,
-          "y": 0.5,
-          "uniqueID": "id-1419",
-          "ioValues": [
-            {
-              "name": "number or geometry",
-              "ioValue": "__GEOMETRY_INPUT__"
-            }
-          ]
-        },
-        {
-          "atomType": "Code",
-          "x": 0.2,
-          "y": 0.2,
-          "uniqueID": "id-1421",
-          "ioValues": [
-            {
-              "name": "winL",
-              "ioValue": -2161
-            },
-            {
-              "name": "winR",
-              "ioValue": -1281
-            },
-            {
-              "name": "winSill",
-              "ioValue": 510
-            },
-            {
-              "name": "winHead",
-              "ioValue": 2160
-            },
-            {
-              "name": "outerY",
-              "ioValue": -455
-            },
-            {
-              "name": "frameDepth",
-              "ioValue": 60
-            },
-            {
-              "name": "frameWidth",
-              "ioValue": 45
-            }
-          ],
-          "interpreterVersion": 1,
-          "code": "/** Left Window frame: white sash frame filling the rough opening, set at the outside face of the wall (outerY). mm, scan coordinates. */\nfunction run(\n  winL: number = -1810,\n  winR: number = -1230,\n  winSill: number = 510,\n  winHead: number = 2165,\n  outerY: number = -455,\n  frameDepth: number = 60,\n  frameWidth: number = 45,\n): Assembly {\n  const box = (a: number[], b: number[]) => replicad.makeBox(a, b);\n  const y0 = outerY - frameDepth;\n  const outer = box([winL, y0, winSill], [winR, outerY, winHead]);\n  const inner = box([winL + frameWidth, y0 - 1, winSill + frameWidth], [winR - frameWidth, outerY + 1, winHead - frameWidth]);\n  return new Assembly({ geometry: outer.cut(inner), color: \"#f7f7f5\", tags: [\"window\"] });\n}\n",
-          "compiledCode": "\"use strict\";\n/** Left Window frame: white sash frame filling the rough opening, set at the outside face of the wall (outerY). mm, scan coordinates. */\nfunction run(winL = -1810, winR = -1230, winSill = 510, winHead = 2165, outerY = -455, frameDepth = 60, frameWidth = 45) {\n    const box = (a, b) => replicad.makeBox(a, b);\n    const y0 = outerY - frameDepth;\n    const outer = box([winL, y0, winSill], [winR, outerY, winHead]);\n    const inner = box([winL + frameWidth, y0 - 1, winSill + frameWidth], [winR - frameWidth, outerY + 1, winHead - frameWidth]);\n    return new Assembly({ geometry: outer.cut(inner), color: \"#f7f7f5\", tags: [\"window\"] });\n}\n"
-        },
-        {
-          "atomType": "Code",
-          "x": 0.3,
-          "y": 0.3,
-          "uniqueID": "id-1437",
-          "ioValues": [
-            {
-              "name": "winL",
-              "ioValue": -2161
-            },
-            {
-              "name": "winR",
-              "ioValue": -1281
-            },
-            {
-              "name": "winSill",
-              "ioValue": 510
-            },
-            {
-              "name": "winHead",
-              "ioValue": 2160
-            },
-            {
-              "name": "outerY",
-              "ioValue": -455
-            },
-            {
-              "name": "frameDepth",
-              "ioValue": 60
-            },
-            {
-              "name": "frameWidth",
-              "ioValue": 45
-            },
-            {
-              "name": "glassThick",
-              "ioValue": 6
-            }
-          ],
-          "interpreterVersion": 1,
-          "code": "/** Left Window glass pane, centred in the frame depth. mm, scan coordinates. */\nfunction run(\n  winL: number = -1810,\n  winR: number = -1230,\n  winSill: number = 510,\n  winHead: number = 2165,\n  outerY: number = -455,\n  frameDepth: number = 60,\n  frameWidth: number = 45,\n  glassThick: number = 6,\n): Assembly {\n  const midY = outerY - frameDepth / 2;\n  const pane = replicad.makeBox(\n    [winL + frameWidth, midY - glassThick / 2, winSill + frameWidth],\n    [winR - frameWidth, midY + glassThick / 2, winHead - frameWidth],\n  );\n  return new Assembly({ geometry: pane, color: \"#cfe6ee\", tags: [\"window\", \"glass\"] });\n}\n",
-          "compiledCode": "\"use strict\";\n/** Left Window glass pane, centred in the frame depth. mm, scan coordinates. */\nfunction run(winL = -1810, winR = -1230, winSill = 510, winHead = 2165, outerY = -455, frameDepth = 60, frameWidth = 45, glassThick = 6) {\n    const midY = outerY - frameDepth / 2;\n    const pane = replicad.makeBox([winL + frameWidth, midY - glassThick / 2, winSill + frameWidth], [winR - frameWidth, midY + glassThick / 2, winHead - frameWidth]);\n    return new Assembly({ geometry: pane, color: \"#cfe6ee\", tags: [\"window\", \"glass\"] });\n}\n"
-        },
-        {
-          "atomType": "Code",
-          "x": 0.3,
-          "y": 0.4,
-          "uniqueID": "id-1454",
-          "ioValues": [
-            {
-              "name": "winL",
-              "ioValue": -2161
-            },
-            {
-              "name": "winR",
-              "ioValue": -1281
-            },
-            {
-              "name": "winSill",
-              "ioValue": 510
-            },
-            {
-              "name": "winHead",
-              "ioValue": 2160
-            },
-            {
-              "name": "outerY",
-              "ioValue": -455
-            },
-            {
-              "name": "frameDepth",
-              "ioValue": 60
-            },
-            {
-              "name": "frameWidth",
-              "ioValue": 45
-            },
-            {
-              "name": "glassThick",
-              "ioValue": 6
-            },
-            {
-              "name": "barCount",
-              "ioValue": 1
-            },
-            {
-              "name": "barWidth",
-              "ioValue": 30
-            },
-            {
-              "name": "barDepth",
-              "ioValue": 10
-            }
-          ],
-          "interpreterVersion": 1,
-          "code": "/** Left Window black vertical grille bars, evenly spaced on the room side of the glass. mm, scan coordinates. */\nfunction run(\n  winL: number = -1810,\n  winR: number = -1230,\n  winSill: number = 510,\n  winHead: number = 2165,\n  outerY: number = -455,\n  frameDepth: number = 60,\n  frameWidth: number = 45,\n  glassThick: number = 6,\n  barCount: number = 1,\n  barWidth: number = 30,\n  barDepth: number = 10,\n): Assembly {\n  const midY = outerY - frameDepth / 2;\n  const yGlass = midY - glassThick / 2; // room-side face of the glass\n  const x0 = winL + frameWidth;\n  const span = winR - frameWidth - x0;\n  let bars = null;\n  for (let i = 1; i <= barCount; i++) {\n    const cx = x0 + (span * i) / (barCount + 1);\n    const bar = replicad.makeBox(\n      [cx - barWidth / 2, yGlass - barDepth, winSill + frameWidth],\n      [cx + barWidth / 2, yGlass, winHead - frameWidth],\n    );\n    bars = bars ? bars.fuse(bar) : bar;\n  }\n  return new Assembly({ geometry: bars, color: \"#262626\", tags: [\"window\"] });\n}\n",
-          "compiledCode": "\"use strict\";\n/** Left Window black vertical grille bars, evenly spaced on the room side of the glass. mm, scan coordinates. */\nfunction run(winL = -1810, winR = -1230, winSill = 510, winHead = 2165, outerY = -455, frameDepth = 60, frameWidth = 45, glassThick = 6, barCount = 1, barWidth = 30, barDepth = 10) {\n    const midY = outerY - frameDepth / 2;\n    const yGlass = midY - glassThick / 2; // room-side face of the glass\n    const x0 = winL + frameWidth;\n    const span = winR - frameWidth - x0;\n    let bars = null;\n    for (let i = 1; i <= barCount; i++) {\n        const cx = x0 + (span * i) / (barCount + 1);\n        const bar = replicad.makeBox([cx - barWidth / 2, yGlass - barDepth, winSill + frameWidth], [cx + barWidth / 2, yGlass, winHead - frameWidth]);\n        bars = bars ? bars.fuse(bar) : bar;\n    }\n    return new Assembly({ geometry: bars, color: \"#262626\", tags: [\"window\"] });\n}\n"
-        },
-        {
-          "atomType": "Assembly",
-          "x": 0.4,
-          "y": 0.6,
-          "uniqueID": "id-1474",
-          "ioValues": [
-            {
-              "name": "makeDisjoint",
-              "ioValue": false
-            },
-            {
-              "name": "Shape 1",
-              "ioValue": "__GEOMETRY_INPUT__"
-            },
-            {
-              "name": "Shape2",
-              "ioValue": "__GEOMETRY_INPUT__"
-            },
-            {
-              "name": "Shape3",
-              "ioValue": "__GEOMETRY_INPUT__"
-            },
-            {
-              "name": "Shape4",
-              "ioValue": "__GEOMETRY_INPUT__"
-            }
-          ]
-        }
-      ],
-      "allConnectors": [
         {
           "ap2Name": "Shape 1",
-          "ap1ID": "id-1421",
-          "ap2ID": "id-1474"
+          "ap1ID": "id-2286",
+          "ap2ID": "id-2291"
+        },
+        {
+          "ap2Name": "geometry",
+          "ap1ID": "id-2287",
+          "ap2ID": "id-2288"
         },
         {
           "ap2Name": "Shape2",
-          "ap1ID": "id-1437",
-          "ap2ID": "id-1474"
+          "ap1ID": "id-2288",
+          "ap2ID": "id-2291"
+        },
+        {
+          "ap2Name": "geometry",
+          "ap1ID": "id-2289",
+          "ap2ID": "id-2290"
         },
         {
           "ap2Name": "Shape3",
-          "ap1ID": "id-1454",
-          "ap2ID": "id-1474"
+          "ap1ID": "id-2290",
+          "ap2ID": "id-2291"
         },
         {
-          "ap2Name": "number or geometry",
-          "ap1ID": "id-1474",
-          "ap2ID": "id-1419"
-        }
-      ],
-      "fileTypeVersion": 1
-    },
-    {
-      "atomType": "Molecule",
-      "x": 0.6,
-      "y": 0.4,
-      "uniqueID": "id-1481",
-      "name": "Right Window",
-      "topLevel": false,
-      "allAtoms": [
-        {
-          "atomType": "Output",
-          "x": 1,
-          "y": 0.5,
-          "uniqueID": "id-1483",
-          "ioValues": [
-            {
-              "name": "number or geometry",
-              "ioValue": "__GEOMETRY_INPUT__"
-            }
-          ]
+          "ap2Name": "geometry",
+          "ap1ID": "id-2291",
+          "ap2ID": "id-2292"
         },
         {
-          "atomType": "Code",
-          "x": 0.2,
-          "y": 0.2,
-          "uniqueID": "id-1485",
-          "ioValues": [
-            {
-              "name": "winL",
-              "ioValue": 1210
-            },
-            {
-              "name": "winR",
-              "ioValue": 2090
-            },
-            {
-              "name": "winSill",
-              "ioValue": 510
-            },
-            {
-              "name": "winHead",
-              "ioValue": 2160
-            },
-            {
-              "name": "outerY",
-              "ioValue": -455
-            },
-            {
-              "name": "frameDepth",
-              "ioValue": 60
-            },
-            {
-              "name": "frameWidth",
-              "ioValue": 45
-            }
-          ],
-          "interpreterVersion": 1,
-          "code": "/** Right Window frame: white sash frame filling the rough opening, set at the outside face of the wall (outerY). mm, scan coordinates. */\nfunction run(\n  winL: number = 1265,\n  winR: number = 2141,\n  winSill: number = 510,\n  winHead: number = 2150,\n  outerY: number = -455,\n  frameDepth: number = 60,\n  frameWidth: number = 45,\n): Assembly {\n  const box = (a: number[], b: number[]) => replicad.makeBox(a, b);\n  const y0 = outerY - frameDepth;\n  const outer = box([winL, y0, winSill], [winR, outerY, winHead]);\n  const inner = box([winL + frameWidth, y0 - 1, winSill + frameWidth], [winR - frameWidth, outerY + 1, winHead - frameWidth]);\n  return new Assembly({ geometry: outer.cut(inner), color: \"#f7f7f5\", tags: [\"window\"] });\n}\n",
-          "compiledCode": "\"use strict\";\n/** Right Window frame: white sash frame filling the rough opening, set at the outside face of the wall (outerY). mm, scan coordinates. */\nfunction run(winL = 1265, winR = 2141, winSill = 510, winHead = 2150, outerY = -455, frameDepth = 60, frameWidth = 45) {\n    const box = (a, b) => replicad.makeBox(a, b);\n    const y0 = outerY - frameDepth;\n    const outer = box([winL, y0, winSill], [winR, outerY, winHead]);\n    const inner = box([winL + frameWidth, y0 - 1, winSill + frameWidth], [winR - frameWidth, outerY + 1, winHead - frameWidth]);\n    return new Assembly({ geometry: outer.cut(inner), color: \"#f7f7f5\", tags: [\"window\"] });\n}\n"
+          "ap2Name": "Shape3",
+          "ap1ID": "id-2292",
+          "ap2ID": "id-2342"
         },
-        {
-          "atomType": "Code",
-          "x": 0.3,
-          "y": 0.3,
-          "uniqueID": "id-1501",
-          "ioValues": [
-            {
-              "name": "winL",
-              "ioValue": 1210
-            },
-            {
-              "name": "winR",
-              "ioValue": 2090
-            },
-            {
-              "name": "winSill",
-              "ioValue": 510
-            },
-            {
-              "name": "winHead",
-              "ioValue": 2160
-            },
-            {
-              "name": "outerY",
-              "ioValue": -455
-            },
-            {
-              "name": "frameDepth",
-              "ioValue": 60
-            },
-            {
-              "name": "frameWidth",
-              "ioValue": 45
-            },
-            {
-              "name": "glassThick",
-              "ioValue": 6
-            }
-          ],
-          "interpreterVersion": 1,
-          "code": "/** Right Window glass pane, centred in the frame depth. mm, scan coordinates. */\nfunction run(\n  winL: number = 1265,\n  winR: number = 2141,\n  winSill: number = 510,\n  winHead: number = 2150,\n  outerY: number = -455,\n  frameDepth: number = 60,\n  frameWidth: number = 45,\n  glassThick: number = 6,\n): Assembly {\n  const midY = outerY - frameDepth / 2;\n  const pane = replicad.makeBox(\n    [winL + frameWidth, midY - glassThick / 2, winSill + frameWidth],\n    [winR - frameWidth, midY + glassThick / 2, winHead - frameWidth],\n  );\n  return new Assembly({ geometry: pane, color: \"#cfe6ee\", tags: [\"window\", \"glass\"] });\n}\n",
-          "compiledCode": "\"use strict\";\n/** Right Window glass pane, centred in the frame depth. mm, scan coordinates. */\nfunction run(winL = 1265, winR = 2141, winSill = 510, winHead = 2150, outerY = -455, frameDepth = 60, frameWidth = 45, glassThick = 6) {\n    const midY = outerY - frameDepth / 2;\n    const pane = replicad.makeBox([winL + frameWidth, midY - glassThick / 2, winSill + frameWidth], [winR - frameWidth, midY + glassThick / 2, winHead - frameWidth]);\n    return new Assembly({ geometry: pane, color: \"#cfe6ee\", tags: [\"window\", \"glass\"] });\n}\n"
-        },
-        {
-          "atomType": "Code",
-          "x": 0.3,
-          "y": 0.4,
-          "uniqueID": "id-1518",
-          "ioValues": [
-            {
-              "name": "winL",
-              "ioValue": 1210
-            },
-            {
-              "name": "winR",
-              "ioValue": 2090
-            },
-            {
-              "name": "winSill",
-              "ioValue": 510
-            },
-            {
-              "name": "winHead",
-              "ioValue": 2160
-            },
-            {
-              "name": "outerY",
-              "ioValue": -455
-            },
-            {
-              "name": "frameDepth",
-              "ioValue": 60
-            },
-            {
-              "name": "frameWidth",
-              "ioValue": 45
-            },
-            {
-              "name": "glassThick",
-              "ioValue": 6
-            },
-            {
-              "name": "barCount",
-              "ioValue": 1
-            },
-            {
-              "name": "barWidth",
-              "ioValue": 30
-            },
-            {
-              "name": "barDepth",
-              "ioValue": 10
-            }
-          ],
-          "interpreterVersion": 1,
-          "code": "/** Right Window black vertical grille bars, evenly spaced on the room side of the glass. mm, scan coordinates. */\nfunction run(\n  winL: number = 1265,\n  winR: number = 2141,\n  winSill: number = 510,\n  winHead: number = 2150,\n  outerY: number = -455,\n  frameDepth: number = 60,\n  frameWidth: number = 45,\n  glassThick: number = 6,\n  barCount: number = 1,\n  barWidth: number = 30,\n  barDepth: number = 10,\n): Assembly {\n  const midY = outerY - frameDepth / 2;\n  const yGlass = midY - glassThick / 2; // room-side face of the glass\n  const x0 = winL + frameWidth;\n  const span = winR - frameWidth - x0;\n  let bars = null;\n  for (let i = 1; i <= barCount; i++) {\n    const cx = x0 + (span * i) / (barCount + 1);\n    const bar = replicad.makeBox(\n      [cx - barWidth / 2, yGlass - barDepth, winSill + frameWidth],\n      [cx + barWidth / 2, yGlass, winHead - frameWidth],\n    );\n    bars = bars ? bars.fuse(bar) : bar;\n  }\n  return new Assembly({ geometry: bars, color: \"#262626\", tags: [\"window\"] });\n}\n",
-          "compiledCode": "\"use strict\";\n/** Right Window black vertical grille bars, evenly spaced on the room side of the glass. mm, scan coordinates. */\nfunction run(winL = 1265, winR = 2141, winSill = 510, winHead = 2150, outerY = -455, frameDepth = 60, frameWidth = 45, glassThick = 6, barCount = 1, barWidth = 30, barDepth = 10) {\n    const midY = outerY - frameDepth / 2;\n    const yGlass = midY - glassThick / 2; // room-side face of the glass\n    const x0 = winL + frameWidth;\n    const span = winR - frameWidth - x0;\n    let bars = null;\n    for (let i = 1; i <= barCount; i++) {\n        const cx = x0 + (span * i) / (barCount + 1);\n        const bar = replicad.makeBox([cx - barWidth / 2, yGlass - barDepth, winSill + frameWidth], [cx + barWidth / 2, yGlass, winHead - frameWidth]);\n        bars = bars ? bars.fuse(bar) : bar;\n    }\n    return new Assembly({ geometry: bars, color: \"#262626\", tags: [\"window\"] });\n}\n"
-        },
-        {
-          "atomType": "Assembly",
-          "x": 0.4,
-          "y": 0.6,
-          "uniqueID": "id-1538",
-          "ioValues": [
-            {
-              "name": "makeDisjoint",
-              "ioValue": false
-            },
-            {
-              "name": "Shape 1",
-              "ioValue": "__GEOMETRY_INPUT__"
-            },
-            {
-              "name": "Shape2",
-              "ioValue": "__GEOMETRY_INPUT__"
-            },
-            {
-              "name": "Shape3",
-              "ioValue": "__GEOMETRY_INPUT__"
-            },
-            {
-              "name": "Shape4",
-              "ioValue": "__GEOMETRY_INPUT__"
-            }
-          ]
-        }
-      ],
-      "allConnectors": [
         {
           "ap2Name": "Shape 1",
-          "ap1ID": "id-1485",
-          "ap2ID": "id-1538"
+          "ap1ID": "id-2293",
+          "ap2ID": "id-2283"
         },
         {
           "ap2Name": "Shape2",
-          "ap1ID": "id-1501",
-          "ap2ID": "id-1538"
+          "ap1ID": "id-2296",
+          "ap2ID": "id-2283"
+        },
+        {
+          "ap2Name": "geometry",
+          "ap1ID": "id-2299",
+          "ap2ID": "id-2282"
         },
         {
           "ap2Name": "Shape3",
-          "ap1ID": "id-1518",
-          "ap2ID": "id-1538"
+          "ap1ID": "id-2299",
+          "ap2ID": "id-2283"
+        },
+        {
+          "ap2Name": "Shape5",
+          "ap1ID": "id-2302",
+          "ap2ID": "id-2283"
+        },
+        {
+          "ap2Name": "Shape6",
+          "ap1ID": "id-2305",
+          "ap2ID": "id-2283"
+        },
+        {
+          "ap2Name": "Shape7",
+          "ap1ID": "id-2308",
+          "ap2ID": "id-2283"
+        },
+        {
+          "ap2Name": "Shape8",
+          "ap1ID": "id-2311",
+          "ap2ID": "id-2283"
+        },
+        {
+          "ap2Name": "Shape9",
+          "ap1ID": "id-2314",
+          "ap2ID": "id-2283"
+        },
+        {
+          "ap2Name": "Shape10",
+          "ap1ID": "id-2320",
+          "ap2ID": "id-2283"
+        },
+        {
+          "ap2Name": "Shape11",
+          "ap1ID": "id-2326",
+          "ap2ID": "id-2283"
+        },
+        {
+          "ap2Name": "Shape12",
+          "ap1ID": "id-2332",
+          "ap2ID": "id-2283"
+        },
+        {
+          "ap2Name": "Shape13",
+          "ap1ID": "id-2335",
+          "ap2ID": "id-2283"
+        },
+        {
+          "ap2Name": "Shape14",
+          "ap1ID": "id-2338",
+          "ap2ID": "id-2283"
+        },
+        {
+          "ap2Name": "Shape 1",
+          "ap1ID": "id-2341",
+          "ap2ID": "id-2342"
         },
         {
           "ap2Name": "number or geometry",
-          "ap1ID": "id-1538",
-          "ap2ID": "id-1483"
+          "ap1ID": "id-2342",
+          "ap2ID": "id-2276"
         }
       ],
       "fileTypeVersion": 1
-    },
-    {
-      "atomType": "Molecule",
-      "x": 0.6,
-      "y": 0.8,
-      "uniqueID": "id-1545",
-      "name": "Alcove Window Casing",
-      "topLevel": false,
-      "allAtoms": [
-        {
-          "atomType": "Output",
-          "x": 1,
-          "y": 0.5,
-          "uniqueID": "id-1547",
-          "ioValues": [
-            {
-              "name": "number or geometry",
-              "ioValue": "__GEOMETRY_INPUT__"
-            }
-          ]
-        },
-        {
-          "atomType": "Code",
-          "x": 0.2,
-          "y": 0.2,
-          "uniqueID": "id-1549",
-          "ioValues": [
-            {
-              "name": "openL",
-              "ioValue": -948
-            },
-            {
-              "name": "openR",
-              "ioValue": 843
-            },
-            {
-              "name": "openBottom",
-              "ioValue": 450
-            },
-            {
-              "name": "openTop",
-              "ioValue": 2180
-            },
-            {
-              "name": "faceY",
-              "ioValue": 155
-            },
-            {
-              "name": "trimWidth",
-              "ioValue": 60
-            },
-            {
-              "name": "trimThick",
-              "ioValue": 20
-            },
-            {
-              "name": "legsToFloor",
-              "ioValue": false
-            }
-          ],
-          "interpreterVersion": 1,
-          "code": "/** Alcove Window Casing: flat painted trim around the opening, proud of the wall face at faceY (picture frame on all four sides). mm, scan coordinates. */\nfunction run(\n  openL: number = -980,\n  openR: number = 880,\n  openBottom: number = 450,\n  openTop: number = 1990,\n  faceY: number = 155,\n  trimWidth: number = 60,\n  trimThick: number = 20,\n  legsToFloor: boolean = false,\n): Assembly {\n  const box = (a: number[], b: number[]) => replicad.makeBox(a, b);\n  const bottom = legsToFloor ? 0 : openBottom - trimWidth;\n  const outer = box([openL - trimWidth, faceY - trimThick, bottom], [openR + trimWidth, faceY, openTop + trimWidth]);\n  const inner = box([openL, faceY - trimThick - 1, legsToFloor ? -1 : openBottom], [openR, faceY + 1, openTop]);\n  return new Assembly({ geometry: outer.cut(inner), color: \"#ffffff\", tags: [\"trim\"] });\n}\n",
-          "compiledCode": "\"use strict\";\n/** Alcove Window Casing: flat painted trim around the opening, proud of the wall face at faceY (picture frame on all four sides). mm, scan coordinates. */\nfunction run(openL = -980, openR = 880, openBottom = 450, openTop = 1990, faceY = 155, trimWidth = 60, trimThick = 20, legsToFloor = false) {\n    const box = (a, b) => replicad.makeBox(a, b);\n    const bottom = legsToFloor ? 0 : openBottom - trimWidth;\n    const outer = box([openL - trimWidth, faceY - trimThick, bottom], [openR + trimWidth, faceY, openTop + trimWidth]);\n    const inner = box([openL, faceY - trimThick - 1, legsToFloor ? -1 : openBottom], [openR, faceY + 1, openTop]);\n    return new Assembly({ geometry: outer.cut(inner), color: \"#ffffff\", tags: [\"trim\"] });\n}\n"
-        }
-      ],
-      "allConnectors": [
-        {
-          "ap2Name": "number or geometry",
-          "ap1ID": "id-1549",
-          "ap2ID": "id-1547"
-        }
-      ],
-      "fileTypeVersion": 1
-    },
-    {
-      "atomType": "Molecule",
-      "x": 0.6,
-      "y": 0.6,
-      "uniqueID": "id-1566",
-      "name": "Left Window Casing",
-      "topLevel": false,
-      "allAtoms": [
-        {
-          "atomType": "Output",
-          "x": 1,
-          "y": 0.5,
-          "uniqueID": "id-1568",
-          "ioValues": [
-            {
-              "name": "number or geometry",
-              "ioValue": "__GEOMETRY_INPUT__"
-            }
-          ]
-        },
-        {
-          "atomType": "Code",
-          "x": 0.2,
-          "y": 0.2,
-          "uniqueID": "id-1570",
-          "ioValues": [
-            {
-              "name": "openL",
-              "ioValue": -2161
-            },
-            {
-              "name": "openR",
-              "ioValue": -1281
-            },
-            {
-              "name": "openBottom",
-              "ioValue": 510
-            },
-            {
-              "name": "openTop",
-              "ioValue": 2160
-            },
-            {
-              "name": "faceY",
-              "ioValue": -620
-            },
-            {
-              "name": "trimWidth",
-              "ioValue": 60
-            },
-            {
-              "name": "trimThick",
-              "ioValue": 20
-            },
-            {
-              "name": "legsToFloor",
-              "ioValue": true
-            }
-          ],
-          "interpreterVersion": 1,
-          "code": "/** Left Window Casing: flat painted trim around the opening, proud of the wall face at faceY; legs run to the floor as in the photos. mm, scan coordinates. */\nfunction run(\n  openL: number = -1810,\n  openR: number = -1230,\n  openBottom: number = 510,\n  openTop: number = 2165,\n  faceY: number = -620,\n  trimWidth: number = 60,\n  trimThick: number = 20,\n  legsToFloor: boolean = true,\n): Assembly {\n  const box = (a: number[], b: number[]) => replicad.makeBox(a, b);\n  const bottom = legsToFloor ? 0 : openBottom - trimWidth;\n  const outer = box([openL - trimWidth, faceY - trimThick, bottom], [openR + trimWidth, faceY, openTop + trimWidth]);\n  const inner = box([openL, faceY - trimThick - 1, legsToFloor ? -1 : openBottom], [openR, faceY + 1, openTop]);\n  return new Assembly({ geometry: outer.cut(inner), color: \"#ffffff\", tags: [\"trim\"] });\n}\n",
-          "compiledCode": "\"use strict\";\n/** Left Window Casing: flat painted trim around the opening, proud of the wall face at faceY; legs run to the floor as in the photos. mm, scan coordinates. */\nfunction run(openL = -1810, openR = -1230, openBottom = 510, openTop = 2165, faceY = -620, trimWidth = 60, trimThick = 20, legsToFloor = true) {\n    const box = (a, b) => replicad.makeBox(a, b);\n    const bottom = legsToFloor ? 0 : openBottom - trimWidth;\n    const outer = box([openL - trimWidth, faceY - trimThick, bottom], [openR + trimWidth, faceY, openTop + trimWidth]);\n    const inner = box([openL, faceY - trimThick - 1, legsToFloor ? -1 : openBottom], [openR, faceY + 1, openTop]);\n    return new Assembly({ geometry: outer.cut(inner), color: \"#ffffff\", tags: [\"trim\"] });\n}\n"
-        }
-      ],
-      "allConnectors": [
-        {
-          "ap2Name": "number or geometry",
-          "ap1ID": "id-1570",
-          "ap2ID": "id-1568"
-        }
-      ],
-      "fileTypeVersion": 1
-    },
-    {
-      "atomType": "Molecule",
-      "x": 0.6,
-      "y": 0.7,
-      "uniqueID": "id-1587",
-      "name": "Right Window Casing",
-      "topLevel": false,
-      "allAtoms": [
-        {
-          "atomType": "Output",
-          "x": 1,
-          "y": 0.5,
-          "uniqueID": "id-1589",
-          "ioValues": [
-            {
-              "name": "number or geometry",
-              "ioValue": "__GEOMETRY_INPUT__"
-            }
-          ]
-        },
-        {
-          "atomType": "Code",
-          "x": 0.2,
-          "y": 0.2,
-          "uniqueID": "id-1591",
-          "ioValues": [
-            {
-              "name": "openL",
-              "ioValue": 1210
-            },
-            {
-              "name": "openR",
-              "ioValue": 2090
-            },
-            {
-              "name": "openBottom",
-              "ioValue": 510
-            },
-            {
-              "name": "openTop",
-              "ioValue": 2160
-            },
-            {
-              "name": "faceY",
-              "ioValue": -620
-            },
-            {
-              "name": "trimWidth",
-              "ioValue": 60
-            },
-            {
-              "name": "trimThick",
-              "ioValue": 20
-            },
-            {
-              "name": "legsToFloor",
-              "ioValue": true
-            }
-          ],
-          "interpreterVersion": 1,
-          "code": "/** Right Window Casing: flat painted trim around the opening, proud of the wall face at faceY; legs run to the floor as in the photos. mm, scan coordinates. */\nfunction run(\n  openL: number = 1265,\n  openR: number = 2141,\n  openBottom: number = 510,\n  openTop: number = 2150,\n  faceY: number = -620,\n  trimWidth: number = 60,\n  trimThick: number = 20,\n  legsToFloor: boolean = true,\n): Assembly {\n  const box = (a: number[], b: number[]) => replicad.makeBox(a, b);\n  const bottom = legsToFloor ? 0 : openBottom - trimWidth;\n  const outer = box([openL - trimWidth, faceY - trimThick, bottom], [openR + trimWidth, faceY, openTop + trimWidth]);\n  const inner = box([openL, faceY - trimThick - 1, legsToFloor ? -1 : openBottom], [openR, faceY + 1, openTop]);\n  return new Assembly({ geometry: outer.cut(inner), color: \"#ffffff\", tags: [\"trim\"] });\n}\n",
-          "compiledCode": "\"use strict\";\n/** Right Window Casing: flat painted trim around the opening, proud of the wall face at faceY; legs run to the floor as in the photos. mm, scan coordinates. */\nfunction run(openL = 1265, openR = 2141, openBottom = 510, openTop = 2150, faceY = -620, trimWidth = 60, trimThick = 20, legsToFloor = true) {\n    const box = (a, b) => replicad.makeBox(a, b);\n    const bottom = legsToFloor ? 0 : openBottom - trimWidth;\n    const outer = box([openL - trimWidth, faceY - trimThick, bottom], [openR + trimWidth, faceY, openTop + trimWidth]);\n    const inner = box([openL, faceY - trimThick - 1, legsToFloor ? -1 : openBottom], [openR, faceY + 1, openTop]);\n    return new Assembly({ geometry: outer.cut(inner), color: \"#ffffff\", tags: [\"trim\"] });\n}\n"
-        }
-      ],
-      "allConnectors": [
-        {
-          "ap2Name": "number or geometry",
-          "ap1ID": "id-1591",
-          "ap2ID": "id-1589"
-        }
-      ],
-      "fileTypeVersion": 1
-    },
-    {
-      "atomType": "Assembly",
-      "x": 0.7,
-      "y": 0.4,
-      "uniqueID": "id-1608",
-      "ioValues": [
-        {
-          "name": "makeDisjoint",
-          "ioValue": false
-        },
-        {
-          "name": "Shape 1",
-          "ioValue": "__GEOMETRY_INPUT__"
-        },
-        {
-          "name": "Shape2",
-          "ioValue": "__GEOMETRY_INPUT__"
-        },
-        {
-          "name": "Shape3",
-          "ioValue": "__GEOMETRY_INPUT__"
-        },
-        {
-          "name": "Shape4",
-          "ioValue": "__GEOMETRY_INPUT__"
-        },
-        {
-          "name": "Shape5",
-          "ioValue": "__GEOMETRY_INPUT__"
-        },
-        {
-          "name": "Shape6",
-          "ioValue": "__GEOMETRY_INPUT__"
-        },
-        {
-          "name": "Shape7",
-          "ioValue": "__GEOMETRY_INPUT__"
-        },
-        {
-          "name": "Shape8",
-          "ioValue": "__GEOMETRY_INPUT__"
-        },
-        {
-          "name": "Shape9",
-          "ioValue": "__GEOMETRY_INPUT__"
-        },
-        {
-          "name": "Shape10",
-          "ioValue": "__GEOMETRY_INPUT__"
-        },
-        {
-          "name": "Shape11",
-          "ioValue": "__GEOMETRY_INPUT__"
-        },
-        {
-          "name": "Shape12",
-          "ioValue": "__GEOMETRY_INPUT__"
-        },
-        {
-          "name": "Shape13",
-          "ioValue": "__GEOMETRY_INPUT__"
-        },
-        {
-          "name": "Shape14",
-          "ioValue": "__GEOMETRY_INPUT__"
-        },
-        {
-          "name": "Shape15",
-          "ioValue": "__GEOMETRY_INPUT__"
-        },
-        {
-          "name": "Shape16",
-          "ioValue": "__GEOMETRY_INPUT__"
-        },
-        {
-          "name": "Shape17",
-          "ioValue": "__GEOMETRY_INPUT__"
-        }
-      ]
-    },
-    {
-      "atomType": "Tag",
-      "x": 0.7,
-      "y": 0.8,
-      "uniqueID": "id-1627",
-      "name": "scan",
-      "ioValues": [
-        {
-          "name": "geometry",
-          "ioValue": "__GEOMETRY_INPUT__"
-        }
-      ],
-      "tags": [
-        "scan"
-      ]
     },
     {
       "atomType": "ExtractTag",
-      "x": 0.8,
-      "y": 0.6,
-      "uniqueID": "id-1630",
-      "name": "Extract trim, glass, window, seat, wall, floor, scan, photo",
+      "x": 0.7,
+      "y": 0.3,
+      "uniqueID": "id-2658",
+      "name": "Extract room, scan, photo",
       "ioValues": [
         {
           "name": "geometry",
@@ -1539,357 +1943,24 @@
       ],
       "tagIndex": 0,
       "selectedTags": [
-        "trim",
-        "glass",
-        "window",
-        "seat",
-        "wall",
-        "floor",
+        "room",
         "scan",
         "photo"
       ],
       "includeUntagged": false,
       "notKeepOut": false
-    },
-    {
-      "atomType": "Rotate",
-      "x": 0.1,
-      "y": 0.2,
-      "uniqueID": "id-1906",
-      "ioValues": [
-        {
-          "name": "geometry",
-          "ioValue": "__GEOMETRY_INPUT__"
-        },
-        {
-          "name": "x-axis degrees",
-          "ioValue": 89.14
-        },
-        {
-          "name": "y-axis degrees",
-          "ioValue": -1.21
-        },
-        {
-          "name": "z-axis degrees",
-          "ioValue": -18.05
-        }
-      ]
-    },
-    {
-      "atomType": "Move",
-      "x": 0.2,
-      "y": 0.2,
-      "uniqueID": "id-1912",
-      "ioValues": [
-        {
-          "name": "geometry",
-          "ioValue": "__GEOMETRY_INPUT__"
-        },
-        {
-          "name": "xDist",
-          "ioValue": 621.9
-        },
-        {
-          "name": "yDist",
-          "ioValue": -2162.4
-        },
-        {
-          "name": "zDist",
-          "ioValue": 1460.7
-        }
-      ]
-    },
-    {
-      "atomType": "Rotate",
-      "x": 0.1,
-      "y": 0.3,
-      "uniqueID": "id-1918",
-      "ioValues": [
-        {
-          "name": "geometry",
-          "ioValue": "__GEOMETRY_INPUT__"
-        },
-        {
-          "name": "x-axis degrees",
-          "ioValue": 86.41
-        },
-        {
-          "name": "y-axis degrees",
-          "ioValue": 1.43
-        },
-        {
-          "name": "z-axis degrees",
-          "ioValue": 20.56
-        }
-      ]
-    },
-    {
-      "atomType": "Move",
-      "x": 0.2,
-      "y": 0.3,
-      "uniqueID": "id-1924",
-      "ioValues": [
-        {
-          "name": "geometry",
-          "ioValue": "__GEOMETRY_INPUT__"
-        },
-        {
-          "name": "xDist",
-          "ioValue": 1013.2
-        },
-        {
-          "name": "yDist",
-          "ioValue": -2428.1
-        },
-        {
-          "name": "zDist",
-          "ioValue": 1464
-        }
-      ]
-    },
-    {
-      "atomType": "Rotate",
-      "x": 0.1,
-      "y": 0.4,
-      "uniqueID": "id-1930",
-      "ioValues": [
-        {
-          "name": "geometry",
-          "ioValue": "__GEOMETRY_INPUT__"
-        },
-        {
-          "name": "x-axis degrees",
-          "ioValue": 88.63
-        },
-        {
-          "name": "y-axis degrees",
-          "ioValue": 1.77
-        },
-        {
-          "name": "z-axis degrees",
-          "ioValue": 31.51
-        }
-      ]
-    },
-    {
-      "atomType": "Move",
-      "x": 0.2,
-      "y": 0.4,
-      "uniqueID": "id-1936",
-      "ioValues": [
-        {
-          "name": "geometry",
-          "ioValue": "__GEOMETRY_INPUT__"
-        },
-        {
-          "name": "xDist",
-          "ioValue": -429.2
-        },
-        {
-          "name": "yDist",
-          "ioValue": -1600.4
-        },
-        {
-          "name": "zDist",
-          "ioValue": 1403.6
-        }
-      ]
-    },
-    {
-      "atomType": "Assembly",
-      "x": 0.2,
-      "y": 0.3,
-      "uniqueID": "id-1942",
-      "ioValues": [
-        {
-          "name": "makeDisjoint",
-          "ioValue": false
-        },
-        {
-          "name": "Shape 1",
-          "ioValue": "__GEOMETRY_INPUT__"
-        },
-        {
-          "name": "Shape2",
-          "ioValue": "__GEOMETRY_INPUT__"
-        },
-        {
-          "name": "Shape3",
-          "ioValue": "__GEOMETRY_INPUT__"
-        },
-        {
-          "name": "Shape4",
-          "ioValue": "__GEOMETRY_INPUT__"
-        }
-      ]
-    },
-    {
-      "atomType": "Tag",
-      "x": 0.3,
-      "y": 0.3,
-      "uniqueID": "id-1949",
-      "name": "photo",
-      "ioValues": [
-        {
-          "name": "geometry",
-          "ioValue": "__GEOMETRY_INPUT__"
-        }
-      ],
-      "tags": [
-        "photo"
-      ]
     }
   ],
   "allConnectors": [
     {
       "ap2Name": "geometry",
-      "ap1ID": "id-1096",
-      "ap2ID": "id-1906"
-    },
-    {
-      "ap2Name": "geometry",
-      "ap1ID": "id-1098",
-      "ap2ID": "id-1918"
-    },
-    {
-      "ap2Name": "geometry",
-      "ap1ID": "id-1100",
-      "ap2ID": "id-1930"
-    },
-    {
-      "ap2Name": "geometry",
-      "ap1ID": "id-1102",
-      "ap2ID": "id-1627"
-    },
-    {
-      "ap2Name": "Shape 1",
-      "ap1ID": "id-1207",
-      "ap2ID": "id-1608"
-    },
-    {
-      "ap2Name": "Shape2",
-      "ap1ID": "id-1224",
-      "ap2ID": "id-1608"
-    },
-    {
-      "ap2Name": "geometry",
-      "ap1ID": "id-1252",
-      "ap2ID": "id-1270"
-    },
-    {
-      "ap2Name": "Shape3",
-      "ap1ID": "id-1252",
-      "ap2ID": "id-1608"
-    },
-    {
-      "ap2Name": "Shape4",
-      "ap1ID": "id-1270",
-      "ap2ID": "id-1608"
-    },
-    {
-      "ap2Name": "Shape5",
-      "ap1ID": "id-1276",
-      "ap2ID": "id-1608"
-    },
-    {
-      "ap2Name": "Shape6",
-      "ap1ID": "id-1298",
-      "ap2ID": "id-1608"
-    },
-    {
-      "ap2Name": "Shape7",
-      "ap1ID": "id-1316",
-      "ap2ID": "id-1608"
-    },
-    {
-      "ap2Name": "Shape8",
-      "ap1ID": "id-1334",
-      "ap2ID": "id-1608"
-    },
-    {
-      "ap2Name": "Shape9",
-      "ap1ID": "id-1353",
-      "ap2ID": "id-1608"
-    },
-    {
-      "ap2Name": "Shape10",
-      "ap1ID": "id-1417",
-      "ap2ID": "id-1608"
-    },
-    {
-      "ap2Name": "Shape11",
-      "ap1ID": "id-1481",
-      "ap2ID": "id-1608"
-    },
-    {
-      "ap2Name": "Shape12",
-      "ap1ID": "id-1545",
-      "ap2ID": "id-1608"
-    },
-    {
-      "ap2Name": "Shape13",
-      "ap1ID": "id-1566",
-      "ap2ID": "id-1608"
-    },
-    {
-      "ap2Name": "Shape14",
-      "ap1ID": "id-1587",
-      "ap2ID": "id-1608"
-    },
-    {
-      "ap2Name": "geometry",
-      "ap1ID": "id-1608",
-      "ap2ID": "id-1630"
-    },
-    {
-      "ap2Name": "Shape15",
-      "ap1ID": "id-1627",
-      "ap2ID": "id-1608"
+      "ap1ID": "id-2274",
+      "ap2ID": "id-2658"
     },
     {
       "ap2Name": "number or geometry",
-      "ap1ID": "id-1630",
+      "ap1ID": "id-2658",
       "ap2ID": "id-1094"
-    },
-    {
-      "ap2Name": "geometry",
-      "ap1ID": "id-1906",
-      "ap2ID": "id-1912"
-    },
-    {
-      "ap2Name": "Shape 1",
-      "ap1ID": "id-1912",
-      "ap2ID": "id-1942"
-    },
-    {
-      "ap2Name": "geometry",
-      "ap1ID": "id-1918",
-      "ap2ID": "id-1924"
-    },
-    {
-      "ap2Name": "Shape2",
-      "ap1ID": "id-1924",
-      "ap2ID": "id-1942"
-    },
-    {
-      "ap2Name": "geometry",
-      "ap1ID": "id-1930",
-      "ap2ID": "id-1936"
-    },
-    {
-      "ap2Name": "Shape3",
-      "ap1ID": "id-1936",
-      "ap2ID": "id-1942"
-    },
-    {
-      "ap2Name": "geometry",
-      "ap1ID": "id-1942",
-      "ap2ID": "id-1949"
-    },
-    {
-      "ap2Name": "Shape16",
-      "ap1ID": "id-1949",
-      "ap2ID": "id-1608"
     }
   ],
   "unitsKey": "MM",
